@@ -7,27 +7,49 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2E8F91DB9F8914EB66EC4DA4 /* Pods_Tests_DGDependencyInjectorTests_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7FE7E71892E7EE56C94CCEB /* Pods_Tests_DGDependencyInjectorTests_iOS.framework */; };
-		47AB44BF1CEA027274F3034B /* Pods_Tests_DGDependencyInjectorTests_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6CFC3D41023C1A1E6CCE04 /* Pods_Tests_DGDependencyInjectorTests_tvOS.framework */; };
-		770E0B41AA503E4CD82E2EDD /* Pods_Frameworks_DGDependencyInjector_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2F836C58E9E79B548B4E44D /* Pods_Frameworks_DGDependencyInjector_tvOS.framework */; };
-		7C22F085D075374E139AA1C0 /* Pods_Tests_DGDependencyInjectorTests_OSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E0644422B9C39D0614E1CF /* Pods_Tests_DGDependencyInjectorTests_OSX.framework */; };
+		0C5BEB0C208321C6B62E8248 /* Pods_Tests_DGDependencyInjectorTests_OSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F65A73832A8BEF71EBD508CA /* Pods_Tests_DGDependencyInjectorTests_OSX.framework */; };
+		2C9F0EC17DB8C3EA5EEACFF3 /* Pods_Frameworks_DGDependencyInjector_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC029E72A7BCD5C86BE09551 /* Pods_Frameworks_DGDependencyInjector_tvOS.framework */; };
+		336121731A4B11D8913D2F73 /* Pods_Frameworks_DGDependencyInjector_watchOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 961395A6A9DCD7AEF1671CA5 /* Pods_Frameworks_DGDependencyInjector_watchOS.framework */; };
+		7AF74F1E069896FFB068C83E /* Pods_Frameworks_DGDependencyInjector_OSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A743FBDA0858CA5DE9BCB1 /* Pods_Frameworks_DGDependencyInjector_OSX.framework */; };
+		815DA10284D71562F6E30F08 /* Pods_Tests_DGDependencyInjectorTests_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD28BA6B0660391D8023F9E /* Pods_Tests_DGDependencyInjectorTests_iOS.framework */; };
 		A3169DBA1DE05E8300BABAFD /* DGDependencyInjector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3169DB01DE05E8300BABAFD /* DGDependencyInjector.framework */; };
-		A3169DD61DE0631900BABAFD /* TemplateClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3169DD41DE0631900BABAFD /* TemplateClass.swift */; };
-		A3169DE81DE06FD100BABAFD /* TemplateClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3169DD41DE0631900BABAFD /* TemplateClass.swift */; };
 		A3169DF81DE0718900BABAFD /* DGDependencyInjector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3169DEF1DE0718900BABAFD /* DGDependencyInjector.framework */; };
 		A3169E151DE072C800BABAFD /* DGDependencyInjector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3169E0C1DE072C700BABAFD /* DGDependencyInjector.framework */; };
 		A3169E761DE083D900BABAFD /* DGDependencyInjector.h in Headers */ = {isa = PBXBuildFile; fileRef = A3169E751DE083D900BABAFD /* DGDependencyInjector.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A3169E771DE083D900BABAFD /* DGDependencyInjector.h in Headers */ = {isa = PBXBuildFile; fileRef = A3169E751DE083D900BABAFD /* DGDependencyInjector.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A3169E781DE083D900BABAFD /* DGDependencyInjector.h in Headers */ = {isa = PBXBuildFile; fileRef = A3169E751DE083D900BABAFD /* DGDependencyInjector.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A3169E791DE083D900BABAFD /* DGDependencyInjector.h in Headers */ = {isa = PBXBuildFile; fileRef = A3169E751DE083D900BABAFD /* DGDependencyInjector.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A38EF2CA1DECF97000637484 /* DGDependencyInjectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38EF2C71DECF97000637484 /* DGDependencyInjectorTests.swift */; };
-		A38EF2CB1DECF97000637484 /* DGDependencyInjectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38EF2C71DECF97000637484 /* DGDependencyInjectorTests.swift */; };
-		A38EF2CC1DECF97000637484 /* DGDependencyInjectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38EF2C71DECF97000637484 /* DGDependencyInjectorTests.swift */; };
-		A3EAC50C1DE5FCBA00E4AA5E /* TemplateClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3169DD41DE0631900BABAFD /* TemplateClass.swift */; };
-		A3EAC50D1DE5FCBB00E4AA5E /* TemplateClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3169DD41DE0631900BABAFD /* TemplateClass.swift */; };
-		B903402BDCE9FBB9D8157F17 /* Pods_Frameworks_DGDependencyInjector_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03885D8C2E644791DDE0CD2F /* Pods_Frameworks_DGDependencyInjector_iOS.framework */; };
-		E24B0F811A9E0893D576A79C /* Pods_Frameworks_DGDependencyInjector_OSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 801237E5846B50C41A6810DA /* Pods_Frameworks_DGDependencyInjector_OSX.framework */; };
-		E9D93E2E81530E7B677A3E86 /* Pods_Frameworks_DGDependencyInjector_watchOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DE778AE1B957838CE41403 /* Pods_Frameworks_DGDependencyInjector_watchOS.framework */; };
+		A37058CE1E5DE3A0009D0739 /* DependencyInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37058CC1E5DE3A0009D0739 /* DependencyInjector.swift */; };
+		A37058CF1E5DE3A0009D0739 /* DependencyInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37058CC1E5DE3A0009D0739 /* DependencyInjector.swift */; };
+		A37058D01E5DE3A0009D0739 /* DependencyInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37058CC1E5DE3A0009D0739 /* DependencyInjector.swift */; };
+		A37058D11E5DE3A0009D0739 /* DependencyInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37058CC1E5DE3A0009D0739 /* DependencyInjector.swift */; };
+		A37058D21E5DE3A0009D0739 /* DependencyModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37058CD1E5DE3A0009D0739 /* DependencyModule.swift */; };
+		A37058D31E5DE3A0009D0739 /* DependencyModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37058CD1E5DE3A0009D0739 /* DependencyModule.swift */; };
+		A37058D41E5DE3A0009D0739 /* DependencyModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37058CD1E5DE3A0009D0739 /* DependencyModule.swift */; };
+		A37058D51E5DE3A0009D0739 /* DependencyModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37058CD1E5DE3A0009D0739 /* DependencyModule.swift */; };
+		A37058DB1E5DE4ED009D0739 /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37058D71E5DE4ED009D0739 /* Cat.swift */; };
+		A37058DC1E5DE4ED009D0739 /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37058D71E5DE4ED009D0739 /* Cat.swift */; };
+		A37058DD1E5DE4ED009D0739 /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37058D71E5DE4ED009D0739 /* Cat.swift */; };
+		A37058DE1E5DE4ED009D0739 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37058D81E5DE4ED009D0739 /* Dog.swift */; };
+		A37058DF1E5DE4ED009D0739 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37058D81E5DE4ED009D0739 /* Dog.swift */; };
+		A37058E01E5DE4ED009D0739 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37058D81E5DE4ED009D0739 /* Dog.swift */; };
+		A37058E11E5DE4ED009D0739 /* IAnimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37058D91E5DE4ED009D0739 /* IAnimal.swift */; };
+		A37058E21E5DE4ED009D0739 /* IAnimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37058D91E5DE4ED009D0739 /* IAnimal.swift */; };
+		A37058E31E5DE4ED009D0739 /* IAnimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37058D91E5DE4ED009D0739 /* IAnimal.swift */; };
+		A37058E41E5DE4ED009D0739 /* PetOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37058DA1E5DE4ED009D0739 /* PetOwner.swift */; };
+		A37058E51E5DE4ED009D0739 /* PetOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37058DA1E5DE4ED009D0739 /* PetOwner.swift */; };
+		A37058E61E5DE4ED009D0739 /* PetOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37058DA1E5DE4ED009D0739 /* PetOwner.swift */; };
+		A37058EA1E5DE500009D0739 /* ClassDependencyInjectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37058E71E5DE500009D0739 /* ClassDependencyInjectorTests.swift */; };
+		A37058EB1E5DE500009D0739 /* ClassDependencyInjectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37058E71E5DE500009D0739 /* ClassDependencyInjectorTests.swift */; };
+		A37058EC1E5DE500009D0739 /* ClassDependencyInjectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37058E71E5DE500009D0739 /* ClassDependencyInjectorTests.swift */; };
+		A37058ED1E5DE500009D0739 /* DepthClassDependencyInjectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37058E81E5DE500009D0739 /* DepthClassDependencyInjectorTests.swift */; };
+		A37058EE1E5DE500009D0739 /* DepthClassDependencyInjectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37058E81E5DE500009D0739 /* DepthClassDependencyInjectorTests.swift */; };
+		A37058EF1E5DE500009D0739 /* DepthClassDependencyInjectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37058E81E5DE500009D0739 /* DepthClassDependencyInjectorTests.swift */; };
+		A37058F01E5DE500009D0739 /* SimpleDependencyInjectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37058E91E5DE500009D0739 /* SimpleDependencyInjectorTests.swift */; };
+		A37058F11E5DE500009D0739 /* SimpleDependencyInjectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37058E91E5DE500009D0739 /* SimpleDependencyInjectorTests.swift */; };
+		A37058F21E5DE500009D0739 /* SimpleDependencyInjectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37058E91E5DE500009D0739 /* SimpleDependencyInjectorTests.swift */; };
+		B0FC9D828A2FC5912F5BEADD /* Pods_Frameworks_DGDependencyInjector_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D092A52CD5C9E78D5BAB3B68 /* Pods_Frameworks_DGDependencyInjector_iOS.framework */; };
+		F4F67F9FC581FB4B3FE5592A /* Pods_Tests_DGDependencyInjectorTests_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30FBFA6B690D58961C4C6B4E /* Pods_Tests_DGDependencyInjectorTests_tvOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,39 +77,46 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		03885D8C2E644791DDE0CD2F /* Pods_Frameworks_DGDependencyInjector_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Frameworks_DGDependencyInjector_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		03DE778AE1B957838CE41403 /* Pods_Frameworks_DGDependencyInjector_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Frameworks_DGDependencyInjector_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0508284D0D5D6BBC9BFF2555 /* Pods-Tests-DGDependencyInjectorTests-OSX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-DGDependencyInjectorTests-OSX.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests-DGDependencyInjectorTests-OSX/Pods-Tests-DGDependencyInjectorTests-OSX.release.xcconfig"; sourceTree = "<group>"; };
-		2C6CFC3D41023C1A1E6CCE04 /* Pods_Tests_DGDependencyInjectorTests_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tests_DGDependencyInjectorTests_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		362F3DCDB3DB28CF0DDD32F3 /* Pods-Frameworks-DGDependencyInjector-OSX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Frameworks-DGDependencyInjector-OSX.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Frameworks-DGDependencyInjector-OSX/Pods-Frameworks-DGDependencyInjector-OSX.debug.xcconfig"; sourceTree = "<group>"; };
-		73856367D216DCC12A3A1D40 /* Pods-Frameworks-DGDependencyInjector-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Frameworks-DGDependencyInjector-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Frameworks-DGDependencyInjector-tvOS/Pods-Frameworks-DGDependencyInjector-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		801237E5846B50C41A6810DA /* Pods_Frameworks_DGDependencyInjector_OSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Frameworks_DGDependencyInjector_OSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		87F8670488A3622145762F73 /* Pods-Tests-DGDependencyInjectorTests-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-DGDependencyInjectorTests-tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests-DGDependencyInjectorTests-tvOS/Pods-Tests-DGDependencyInjectorTests-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		940A92CADB492F30B53A3914 /* Pods-Tests-DGDependencyInjectorTests-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-DGDependencyInjectorTests-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests-DGDependencyInjectorTests-iOS/Pods-Tests-DGDependencyInjectorTests-iOS.release.xcconfig"; sourceTree = "<group>"; };
-		99F16A9C7FA6842EF887491B /* Pods-Frameworks-DGDependencyInjector-watchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Frameworks-DGDependencyInjector-watchOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Frameworks-DGDependencyInjector-watchOS/Pods-Frameworks-DGDependencyInjector-watchOS.release.xcconfig"; sourceTree = "<group>"; };
-		A1E526842654D5A6ABA0401A /* Pods-Frameworks-DGDependencyInjector-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Frameworks-DGDependencyInjector-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Frameworks-DGDependencyInjector-iOS/Pods-Frameworks-DGDependencyInjector-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		014B18FE46E10FAF1ED57221 /* Pods-Tests-DGDependencyInjectorTests-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-DGDependencyInjectorTests-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests-DGDependencyInjectorTests-tvOS/Pods-Tests-DGDependencyInjectorTests-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		04E9350472F8797657D900A2 /* Pods-Frameworks-DGDependencyInjector-OSX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Frameworks-DGDependencyInjector-OSX.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Frameworks-DGDependencyInjector-OSX/Pods-Frameworks-DGDependencyInjector-OSX.debug.xcconfig"; sourceTree = "<group>"; };
+		06A4F07E6E9F15EC544A4BC4 /* Pods-Frameworks-DGDependencyInjector-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Frameworks-DGDependencyInjector-tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Frameworks-DGDependencyInjector-tvOS/Pods-Frameworks-DGDependencyInjector-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		1448BF010D6580639D0657F4 /* Pods-Frameworks-DGDependencyInjector-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Frameworks-DGDependencyInjector-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Frameworks-DGDependencyInjector-iOS/Pods-Frameworks-DGDependencyInjector-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		2053E619579DE23A48C73C9C /* Pods-Frameworks-DGDependencyInjector-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Frameworks-DGDependencyInjector-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Frameworks-DGDependencyInjector-iOS/Pods-Frameworks-DGDependencyInjector-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		30FBFA6B690D58961C4C6B4E /* Pods_Tests_DGDependencyInjectorTests_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tests_DGDependencyInjectorTests_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		49A743FBDA0858CA5DE9BCB1 /* Pods_Frameworks_DGDependencyInjector_OSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Frameworks_DGDependencyInjector_OSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		528C4B0F7B1CB5272A3D467B /* Pods-Frameworks-DGDependencyInjector-OSX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Frameworks-DGDependencyInjector-OSX.release.xcconfig"; path = "Pods/Target Support Files/Pods-Frameworks-DGDependencyInjector-OSX/Pods-Frameworks-DGDependencyInjector-OSX.release.xcconfig"; sourceTree = "<group>"; };
+		5600FD8A1C64D47B1FA0AC05 /* Pods-Tests-DGDependencyInjectorTests-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-DGDependencyInjectorTests-tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests-DGDependencyInjectorTests-tvOS/Pods-Tests-DGDependencyInjectorTests-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		56DA6E93DFB445F3C547AA7D /* Pods-Frameworks-DGDependencyInjector-watchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Frameworks-DGDependencyInjector-watchOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Frameworks-DGDependencyInjector-watchOS/Pods-Frameworks-DGDependencyInjector-watchOS.release.xcconfig"; sourceTree = "<group>"; };
+		76069B1202C521F2393854F5 /* Pods-Tests-DGDependencyInjectorTests-OSX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-DGDependencyInjectorTests-OSX.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests-DGDependencyInjectorTests-OSX/Pods-Tests-DGDependencyInjectorTests-OSX.release.xcconfig"; sourceTree = "<group>"; };
+		806CEF756C404A8188FA4759 /* Pods-Frameworks-DGDependencyInjector-watchOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Frameworks-DGDependencyInjector-watchOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Frameworks-DGDependencyInjector-watchOS/Pods-Frameworks-DGDependencyInjector-watchOS.debug.xcconfig"; sourceTree = "<group>"; };
+		918FC3B9DAF941D1592B143D /* Pods-Frameworks-DGDependencyInjector-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Frameworks-DGDependencyInjector-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Frameworks-DGDependencyInjector-tvOS/Pods-Frameworks-DGDependencyInjector-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		961395A6A9DCD7AEF1671CA5 /* Pods_Frameworks_DGDependencyInjector_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Frameworks_DGDependencyInjector_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3169DB01DE05E8300BABAFD /* DGDependencyInjector.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DGDependencyInjector.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3169DB91DE05E8300BABAFD /* DGDependencyInjectorTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DGDependencyInjectorTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3169DCC1DE0629100BABAFD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3169DD11DE062A000BABAFD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A3169DD41DE0631900BABAFD /* TemplateClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemplateClass.swift; sourceTree = "<group>"; };
 		A3169DDE1DE06EF400BABAFD /* DGDependencyInjector.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DGDependencyInjector.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3169DEF1DE0718900BABAFD /* DGDependencyInjector.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DGDependencyInjector.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3169DF71DE0718900BABAFD /* DGDependencyInjectorTests-tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DGDependencyInjectorTests-tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3169E0C1DE072C700BABAFD /* DGDependencyInjector.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DGDependencyInjector.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3169E141DE072C800BABAFD /* DGDependencyInjectorTests-OSX.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DGDependencyInjectorTests-OSX.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3169E751DE083D900BABAFD /* DGDependencyInjector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGDependencyInjector.h; sourceTree = "<group>"; };
-		A38EF2C71DECF97000637484 /* DGDependencyInjectorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGDependencyInjectorTests.swift; sourceTree = "<group>"; };
-		A5CB5486D945AEB4B0A6C7EA /* Pods-Frameworks-DGDependencyInjector-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Frameworks-DGDependencyInjector-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Frameworks-DGDependencyInjector-iOS/Pods-Frameworks-DGDependencyInjector-iOS.release.xcconfig"; sourceTree = "<group>"; };
-		A7FE7E71892E7EE56C94CCEB /* Pods_Tests_DGDependencyInjectorTests_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tests_DGDependencyInjectorTests_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A9BEB56823DA93E4E8873218 /* Pods-Tests-DGDependencyInjectorTests-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-DGDependencyInjectorTests-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests-DGDependencyInjectorTests-iOS/Pods-Tests-DGDependencyInjectorTests-iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		B2F836C58E9E79B548B4E44D /* Pods_Frameworks_DGDependencyInjector_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Frameworks_DGDependencyInjector_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B4E0644422B9C39D0614E1CF /* Pods_Tests_DGDependencyInjectorTests_OSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tests_DGDependencyInjectorTests_OSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BF3ED8D7257B66C8271511A3 /* Pods-Frameworks-DGDependencyInjector-watchOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Frameworks-DGDependencyInjector-watchOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Frameworks-DGDependencyInjector-watchOS/Pods-Frameworks-DGDependencyInjector-watchOS.debug.xcconfig"; sourceTree = "<group>"; };
-		C2C5A4ACE6006352B65FF144 /* Pods-Tests-DGDependencyInjectorTests-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-DGDependencyInjectorTests-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests-DGDependencyInjectorTests-tvOS/Pods-Tests-DGDependencyInjectorTests-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		CEBD22867FB8D7682731847B /* Pods-Frameworks-DGDependencyInjector-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Frameworks-DGDependencyInjector-tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Frameworks-DGDependencyInjector-tvOS/Pods-Frameworks-DGDependencyInjector-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		D8FFC9EDA48D0257AEC95EA7 /* Pods-Tests-DGDependencyInjectorTests-OSX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-DGDependencyInjectorTests-OSX.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests-DGDependencyInjectorTests-OSX/Pods-Tests-DGDependencyInjectorTests-OSX.debug.xcconfig"; sourceTree = "<group>"; };
-		FA41C7A6E5622C691CB802A4 /* Pods-Frameworks-DGDependencyInjector-OSX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Frameworks-DGDependencyInjector-OSX.release.xcconfig"; path = "Pods/Target Support Files/Pods-Frameworks-DGDependencyInjector-OSX/Pods-Frameworks-DGDependencyInjector-OSX.release.xcconfig"; sourceTree = "<group>"; };
+		A37058CC1E5DE3A0009D0739 /* DependencyInjector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DependencyInjector.swift; sourceTree = "<group>"; };
+		A37058CD1E5DE3A0009D0739 /* DependencyModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DependencyModule.swift; sourceTree = "<group>"; };
+		A37058D71E5DE4ED009D0739 /* Cat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
+		A37058D81E5DE4ED009D0739 /* Dog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
+		A37058D91E5DE4ED009D0739 /* IAnimal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAnimal.swift; sourceTree = "<group>"; };
+		A37058DA1E5DE4ED009D0739 /* PetOwner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetOwner.swift; sourceTree = "<group>"; };
+		A37058E71E5DE500009D0739 /* ClassDependencyInjectorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassDependencyInjectorTests.swift; sourceTree = "<group>"; };
+		A37058E81E5DE500009D0739 /* DepthClassDependencyInjectorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepthClassDependencyInjectorTests.swift; sourceTree = "<group>"; };
+		A37058E91E5DE500009D0739 /* SimpleDependencyInjectorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleDependencyInjectorTests.swift; sourceTree = "<group>"; };
+		A98F76A110CFE94B8F35FDAA /* Pods-Tests-DGDependencyInjectorTests-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-DGDependencyInjectorTests-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests-DGDependencyInjectorTests-iOS/Pods-Tests-DGDependencyInjectorTests-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		B48898EE97550803EF4AB578 /* Pods-Tests-DGDependencyInjectorTests-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-DGDependencyInjectorTests-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests-DGDependencyInjectorTests-iOS/Pods-Tests-DGDependencyInjectorTests-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		D092A52CD5C9E78D5BAB3B68 /* Pods_Frameworks_DGDependencyInjector_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Frameworks_DGDependencyInjector_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC029E72A7BCD5C86BE09551 /* Pods_Frameworks_DGDependencyInjector_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Frameworks_DGDependencyInjector_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5DEC4FF72E053748F1B87EE /* Pods-Tests-DGDependencyInjectorTests-OSX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-DGDependencyInjectorTests-OSX.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests-DGDependencyInjectorTests-OSX/Pods-Tests-DGDependencyInjectorTests-OSX.debug.xcconfig"; sourceTree = "<group>"; };
+		F65A73832A8BEF71EBD508CA /* Pods_Tests_DGDependencyInjectorTests_OSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tests_DGDependencyInjectorTests_OSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAD28BA6B0660391D8023F9E /* Pods_Tests_DGDependencyInjectorTests_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tests_DGDependencyInjectorTests_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B903402BDCE9FBB9D8157F17 /* Pods_Frameworks_DGDependencyInjector_iOS.framework in Frameworks */,
+				B0FC9D828A2FC5912F5BEADD /* Pods_Frameworks_DGDependencyInjector_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,7 +133,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3169DBA1DE05E8300BABAFD /* DGDependencyInjector.framework in Frameworks */,
-				2E8F91DB9F8914EB66EC4DA4 /* Pods_Tests_DGDependencyInjectorTests_iOS.framework in Frameworks */,
+				815DA10284D71562F6E30F08 /* Pods_Tests_DGDependencyInjectorTests_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,7 +141,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9D93E2E81530E7B677A3E86 /* Pods_Frameworks_DGDependencyInjector_watchOS.framework in Frameworks */,
+				336121731A4B11D8913D2F73 /* Pods_Frameworks_DGDependencyInjector_watchOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,7 +149,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				770E0B41AA503E4CD82E2EDD /* Pods_Frameworks_DGDependencyInjector_tvOS.framework in Frameworks */,
+				2C9F0EC17DB8C3EA5EEACFF3 /* Pods_Frameworks_DGDependencyInjector_tvOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,7 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3169DF81DE0718900BABAFD /* DGDependencyInjector.framework in Frameworks */,
-				47AB44BF1CEA027274F3034B /* Pods_Tests_DGDependencyInjectorTests_tvOS.framework in Frameworks */,
+				F4F67F9FC581FB4B3FE5592A /* Pods_Tests_DGDependencyInjectorTests_tvOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,7 +166,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E24B0F811A9E0893D576A79C /* Pods_Frameworks_DGDependencyInjector_OSX.framework in Frameworks */,
+				7AF74F1E069896FFB068C83E /* Pods_Frameworks_DGDependencyInjector_OSX.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,44 +175,44 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3169E151DE072C800BABAFD /* DGDependencyInjector.framework in Frameworks */,
-				7C22F085D075374E139AA1C0 /* Pods_Tests_DGDependencyInjectorTests_OSX.framework in Frameworks */,
+				0C5BEB0C208321C6B62E8248 /* Pods_Tests_DGDependencyInjectorTests_OSX.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		669231B70327907405353162 /* Pods */ = {
+		0647B122FA5DF7331FB4F915 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				362F3DCDB3DB28CF0DDD32F3 /* Pods-Frameworks-DGDependencyInjector-OSX.debug.xcconfig */,
-				FA41C7A6E5622C691CB802A4 /* Pods-Frameworks-DGDependencyInjector-OSX.release.xcconfig */,
-				A1E526842654D5A6ABA0401A /* Pods-Frameworks-DGDependencyInjector-iOS.debug.xcconfig */,
-				A5CB5486D945AEB4B0A6C7EA /* Pods-Frameworks-DGDependencyInjector-iOS.release.xcconfig */,
-				CEBD22867FB8D7682731847B /* Pods-Frameworks-DGDependencyInjector-tvOS.debug.xcconfig */,
-				73856367D216DCC12A3A1D40 /* Pods-Frameworks-DGDependencyInjector-tvOS.release.xcconfig */,
-				BF3ED8D7257B66C8271511A3 /* Pods-Frameworks-DGDependencyInjector-watchOS.debug.xcconfig */,
-				99F16A9C7FA6842EF887491B /* Pods-Frameworks-DGDependencyInjector-watchOS.release.xcconfig */,
-				D8FFC9EDA48D0257AEC95EA7 /* Pods-Tests-DGDependencyInjectorTests-OSX.debug.xcconfig */,
-				0508284D0D5D6BBC9BFF2555 /* Pods-Tests-DGDependencyInjectorTests-OSX.release.xcconfig */,
-				A9BEB56823DA93E4E8873218 /* Pods-Tests-DGDependencyInjectorTests-iOS.debug.xcconfig */,
-				940A92CADB492F30B53A3914 /* Pods-Tests-DGDependencyInjectorTests-iOS.release.xcconfig */,
-				87F8670488A3622145762F73 /* Pods-Tests-DGDependencyInjectorTests-tvOS.debug.xcconfig */,
-				C2C5A4ACE6006352B65FF144 /* Pods-Tests-DGDependencyInjectorTests-tvOS.release.xcconfig */,
+				04E9350472F8797657D900A2 /* Pods-Frameworks-DGDependencyInjector-OSX.debug.xcconfig */,
+				528C4B0F7B1CB5272A3D467B /* Pods-Frameworks-DGDependencyInjector-OSX.release.xcconfig */,
+				2053E619579DE23A48C73C9C /* Pods-Frameworks-DGDependencyInjector-iOS.debug.xcconfig */,
+				1448BF010D6580639D0657F4 /* Pods-Frameworks-DGDependencyInjector-iOS.release.xcconfig */,
+				06A4F07E6E9F15EC544A4BC4 /* Pods-Frameworks-DGDependencyInjector-tvOS.debug.xcconfig */,
+				918FC3B9DAF941D1592B143D /* Pods-Frameworks-DGDependencyInjector-tvOS.release.xcconfig */,
+				806CEF756C404A8188FA4759 /* Pods-Frameworks-DGDependencyInjector-watchOS.debug.xcconfig */,
+				56DA6E93DFB445F3C547AA7D /* Pods-Frameworks-DGDependencyInjector-watchOS.release.xcconfig */,
+				E5DEC4FF72E053748F1B87EE /* Pods-Tests-DGDependencyInjectorTests-OSX.debug.xcconfig */,
+				76069B1202C521F2393854F5 /* Pods-Tests-DGDependencyInjectorTests-OSX.release.xcconfig */,
+				B48898EE97550803EF4AB578 /* Pods-Tests-DGDependencyInjectorTests-iOS.debug.xcconfig */,
+				A98F76A110CFE94B8F35FDAA /* Pods-Tests-DGDependencyInjectorTests-iOS.release.xcconfig */,
+				5600FD8A1C64D47B1FA0AC05 /* Pods-Tests-DGDependencyInjectorTests-tvOS.debug.xcconfig */,
+				014B18FE46E10FAF1ED57221 /* Pods-Tests-DGDependencyInjectorTests-tvOS.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		7CF77685F259EF37974C2D44 /* Frameworks */ = {
+		2766AF92C18229A3B9BA4145 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				801237E5846B50C41A6810DA /* Pods_Frameworks_DGDependencyInjector_OSX.framework */,
-				03885D8C2E644791DDE0CD2F /* Pods_Frameworks_DGDependencyInjector_iOS.framework */,
-				B2F836C58E9E79B548B4E44D /* Pods_Frameworks_DGDependencyInjector_tvOS.framework */,
-				03DE778AE1B957838CE41403 /* Pods_Frameworks_DGDependencyInjector_watchOS.framework */,
-				B4E0644422B9C39D0614E1CF /* Pods_Tests_DGDependencyInjectorTests_OSX.framework */,
-				A7FE7E71892E7EE56C94CCEB /* Pods_Tests_DGDependencyInjectorTests_iOS.framework */,
-				2C6CFC3D41023C1A1E6CCE04 /* Pods_Tests_DGDependencyInjectorTests_tvOS.framework */,
+				49A743FBDA0858CA5DE9BCB1 /* Pods_Frameworks_DGDependencyInjector_OSX.framework */,
+				D092A52CD5C9E78D5BAB3B68 /* Pods_Frameworks_DGDependencyInjector_iOS.framework */,
+				DC029E72A7BCD5C86BE09551 /* Pods_Frameworks_DGDependencyInjector_tvOS.framework */,
+				961395A6A9DCD7AEF1671CA5 /* Pods_Frameworks_DGDependencyInjector_watchOS.framework */,
+				F65A73832A8BEF71EBD508CA /* Pods_Tests_DGDependencyInjectorTests_OSX.framework */,
+				FAD28BA6B0660391D8023F9E /* Pods_Tests_DGDependencyInjectorTests_iOS.framework */,
+				30FBFA6B690D58961C4C6B4E /* Pods_Tests_DGDependencyInjectorTests_tvOS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -194,8 +223,8 @@
 				A3169DCA1DE0629100BABAFD /* Sources */,
 				A3169DCF1DE062A000BABAFD /* Tests */,
 				A3169DB11DE05E8300BABAFD /* Products */,
-				669231B70327907405353162 /* Pods */,
-				7CF77685F259EF37974C2D44 /* Frameworks */,
+				0647B122FA5DF7331FB4F915 /* Pods */,
+				2766AF92C18229A3B9BA4145 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -216,8 +245,9 @@
 		A3169DCA1DE0629100BABAFD /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				A3169DD41DE0631900BABAFD /* TemplateClass.swift */,
 				A3169E751DE083D900BABAFD /* DGDependencyInjector.h */,
+				A37058CC1E5DE3A0009D0739 /* DependencyInjector.swift */,
+				A37058CD1E5DE3A0009D0739 /* DependencyModule.swift */,
 				A3169DCC1DE0629100BABAFD /* Info.plist */,
 			);
 			path = Sources;
@@ -226,16 +256,30 @@
 		A3169DCF1DE062A000BABAFD /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				A37058D61E5DE4ED009D0739 /* Domains */,
 				A38EF2C61DECF97000637484 /* DGDependencyInjectorTests */,
 				A3169DD11DE062A000BABAFD /* Info.plist */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
 		};
+		A37058D61E5DE4ED009D0739 /* Domains */ = {
+			isa = PBXGroup;
+			children = (
+				A37058D71E5DE4ED009D0739 /* Cat.swift */,
+				A37058D81E5DE4ED009D0739 /* Dog.swift */,
+				A37058D91E5DE4ED009D0739 /* IAnimal.swift */,
+				A37058DA1E5DE4ED009D0739 /* PetOwner.swift */,
+			);
+			path = Domains;
+			sourceTree = "<group>";
+		};
 		A38EF2C61DECF97000637484 /* DGDependencyInjectorTests */ = {
 			isa = PBXGroup;
 			children = (
-				A38EF2C71DECF97000637484 /* DGDependencyInjectorTests.swift */,
+				A37058E71E5DE500009D0739 /* ClassDependencyInjectorTests.swift */,
+				A37058E81E5DE500009D0739 /* DepthClassDependencyInjectorTests.swift */,
+				A37058E91E5DE500009D0739 /* SimpleDependencyInjectorTests.swift */,
 			);
 			path = DGDependencyInjectorTests;
 			sourceTree = "<group>";
@@ -282,13 +326,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A3169DC41DE05E8300BABAFD /* Build configuration list for PBXNativeTarget "DGDependencyInjector-iOS" */;
 			buildPhases = (
-				B5214ED48C416DD9E7F1AD31 /* [CP] Check Pods Manifest.lock */,
+				4DCB0C027B97E4C353C3EE86 /* [CP] Check Pods Manifest.lock */,
 				A3169DAB1DE05E8300BABAFD /* Sources */,
 				A3169DAC1DE05E8300BABAFD /* Frameworks */,
 				A3169DAE1DE05E8300BABAFD /* Resources */,
 				A3169DD81DE0654400BABAFD /* Swiftlint */,
 				A3169E631DE0804300BABAFD /* Headers */,
-				41C9C0BD2D14536F2875BD63 /* [CP] Copy Pods Resources */,
+				E351319E7D55209F629AF19F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -303,12 +347,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A3169DC71DE05E8300BABAFD /* Build configuration list for PBXNativeTarget "DGDependencyInjectorTests-iOS" */;
 			buildPhases = (
-				7F007942F5676625FEC3A28D /* [CP] Check Pods Manifest.lock */,
+				D8ED7383CE3F15FCED55C1E1 /* [CP] Check Pods Manifest.lock */,
 				A3169DB51DE05E8300BABAFD /* Sources */,
 				A3169DB61DE05E8300BABAFD /* Frameworks */,
 				A3169DB71DE05E8300BABAFD /* Resources */,
-				A7DBA28B5F8536475EE842BB /* [CP] Embed Pods Frameworks */,
-				2CBA6EF6F79C1AF4DA0ED8AC /* [CP] Copy Pods Resources */,
+				21C1657857291E1C298105ED /* [CP] Embed Pods Frameworks */,
+				DBB7EC2034AD8777DA268146 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -324,13 +368,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A3169DE31DE06EF400BABAFD /* Build configuration list for PBXNativeTarget "DGDependencyInjector-watchOS" */;
 			buildPhases = (
-				63DAEA967CE55A106ECCF9F3 /* [CP] Check Pods Manifest.lock */,
+				38403A81A68DD14B71CAF17A /* [CP] Check Pods Manifest.lock */,
 				A3169DD91DE06EF400BABAFD /* Sources */,
 				A3169DDA1DE06EF400BABAFD /* Frameworks */,
 				A3169DDC1DE06EF400BABAFD /* Resources */,
 				A3169DE71DE06FB300BABAFD /* Swiftlint */,
 				A3169E651DE0804D00BABAFD /* Headers */,
-				5305034FA9CF8A34DCFC9C3A /* [CP] Copy Pods Resources */,
+				F81E119997F62508A22B855E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -345,13 +389,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A3169E001DE0718900BABAFD /* Build configuration list for PBXNativeTarget "DGDependencyInjector-tvOS" */;
 			buildPhases = (
-				A4178BD6855E5BDC434A9915 /* [CP] Check Pods Manifest.lock */,
+				7E9363BFB3C4F0F49405FEAF /* [CP] Check Pods Manifest.lock */,
 				A3169DEA1DE0718900BABAFD /* Sources */,
 				A3169DEB1DE0718900BABAFD /* Frameworks */,
 				A3169DED1DE0718900BABAFD /* Resources */,
 				A3169E061DE0727A00BABAFD /* Swiftlint */,
 				A3169E281DE07B0500BABAFD /* Headers */,
-				79CF744A109BDB80576A28F0 /* [CP] Copy Pods Resources */,
+				7FE4F0C19E777EAED3F77E49 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -366,12 +410,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A3169E031DE0718900BABAFD /* Build configuration list for PBXNativeTarget "DGDependencyInjectorTests-tvOS" */;
 			buildPhases = (
-				5424976EBBF003CBE9D9E98C /* [CP] Check Pods Manifest.lock */,
+				B76AAFBE9404F84E12408436 /* [CP] Check Pods Manifest.lock */,
 				A3169DF31DE0718900BABAFD /* Sources */,
 				A3169DF41DE0718900BABAFD /* Frameworks */,
 				A3169DF51DE0718900BABAFD /* Resources */,
-				9FE2FA7242554A22DDF335FF /* [CP] Embed Pods Frameworks */,
-				31E486FB727A1A659FF98038 /* [CP] Copy Pods Resources */,
+				BACFE2E7D0DE940C6C942CD6 /* [CP] Embed Pods Frameworks */,
+				915D18BC306182F279583140 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -387,13 +431,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A3169E1D1DE072C800BABAFD /* Build configuration list for PBXNativeTarget "DGDependencyInjector-OSX" */;
 			buildPhases = (
-				6CF32CB5C768C50EECA6B53C /* [CP] Check Pods Manifest.lock */,
+				58E2D351C2C257CF140B136F /* [CP] Check Pods Manifest.lock */,
 				A3169E071DE072C700BABAFD /* Sources */,
 				A3169E081DE072C700BABAFD /* Frameworks */,
 				A3169E0A1DE072C700BABAFD /* Resources */,
 				A3169E231DE0732D00BABAFD /* Swiftlint */,
 				A3169E2A1DE07B3E00BABAFD /* Headers */,
-				62E1B213B8841D1BFD72744F /* [CP] Copy Pods Resources */,
+				2D30AC719EE533F71A5ACC18 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -408,12 +452,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A3169E201DE072C800BABAFD /* Build configuration list for PBXNativeTarget "DGDependencyInjectorTests-OSX" */;
 			buildPhases = (
-				429A7E4B81E593DF338C2699 /* [CP] Check Pods Manifest.lock */,
+				F36F5DA75DFD62AE6E995E0E /* [CP] Check Pods Manifest.lock */,
 				A3169E101DE072C800BABAFD /* Sources */,
 				A3169E111DE072C800BABAFD /* Frameworks */,
 				A3169E121DE072C800BABAFD /* Resources */,
-				9BE2F8A0DEB9780D76E9388F /* [CP] Embed Pods Frameworks */,
-				11C1DCC6D541500B169D94FA /* [CP] Copy Pods Resources */,
+				5C94DB81DA151C27BE0BCE60 /* [CP] Embed Pods Frameworks */,
+				A6B0122A57EF42CCD131A668 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -438,6 +482,7 @@
 					A3169DAF1DE05E8300BABAFD = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 582762VK3P;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					A3169DB81DE05E8300BABAFD = {
@@ -448,12 +493,13 @@
 					A3169DDD1DE06EF400BABAFD = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 582762VK3P;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					A3169DEE1DE0718900BABAFD = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 582762VK3P;
-						LastSwiftMigration = 0810;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					A3169DF61DE0718900BABAFD = {
@@ -464,7 +510,7 @@
 					A3169E0B1DE072C700BABAFD = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 582762VK3P;
-						LastSwiftMigration = 0810;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					A3169E131DE072C800BABAFD = {
@@ -550,112 +596,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		11C1DCC6D541500B169D94FA /* [CP] Copy Pods Resources */ = {
+		21C1657857291E1C298105ED /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests-DGDependencyInjectorTests-OSX/Pods-Tests-DGDependencyInjectorTests-OSX-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests-DGDependencyInjectorTests-iOS/Pods-Tests-DGDependencyInjectorTests-iOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2CBA6EF6F79C1AF4DA0ED8AC /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests-DGDependencyInjectorTests-iOS/Pods-Tests-DGDependencyInjectorTests-iOS-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		31E486FB727A1A659FF98038 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests-DGDependencyInjectorTests-tvOS/Pods-Tests-DGDependencyInjectorTests-tvOS-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		41C9C0BD2D14536F2875BD63 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Frameworks-DGDependencyInjector-iOS/Pods-Frameworks-DGDependencyInjector-iOS-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		429A7E4B81E593DF338C2699 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		5305034FA9CF8A34DCFC9C3A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Frameworks-DGDependencyInjector-watchOS/Pods-Frameworks-DGDependencyInjector-watchOS-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5424976EBBF003CBE9D9E98C /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		62E1B213B8841D1BFD72744F /* [CP] Copy Pods Resources */ = {
+		2D30AC719EE533F71A5ACC18 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -670,7 +626,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Frameworks-DGDependencyInjector-OSX/Pods-Frameworks-DGDependencyInjector-OSX-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		63DAEA967CE55A106ECCF9F3 /* [CP] Check Pods Manifest.lock */ = {
+		38403A81A68DD14B71CAF17A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -685,7 +641,7 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		6CF32CB5C768C50EECA6B53C /* [CP] Check Pods Manifest.lock */ = {
+		4DCB0C027B97E4C353C3EE86 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -700,22 +656,7 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		79CF744A109BDB80576A28F0 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Frameworks-DGDependencyInjector-tvOS/Pods-Frameworks-DGDependencyInjector-tvOS-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7F007942F5676625FEC3A28D /* [CP] Check Pods Manifest.lock */ = {
+		58E2D351C2C257CF140B136F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -730,7 +671,7 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		9BE2F8A0DEB9780D76E9388F /* [CP] Embed Pods Frameworks */ = {
+		5C94DB81DA151C27BE0BCE60 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -745,19 +686,49 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests-DGDependencyInjectorTests-OSX/Pods-Tests-DGDependencyInjectorTests-OSX-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9FE2FA7242554A22DDF335FF /* [CP] Embed Pods Frameworks */ = {
+		7E9363BFB3C4F0F49405FEAF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests-DGDependencyInjectorTests-tvOS/Pods-Tests-DGDependencyInjectorTests-tvOS-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7FE4F0C19E777EAED3F77E49 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Frameworks-DGDependencyInjector-tvOS/Pods-Frameworks-DGDependencyInjector-tvOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		915D18BC306182F279583140 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests-DGDependencyInjectorTests-tvOS/Pods-Tests-DGDependencyInjectorTests-tvOS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A3169DD81DE0654400BABAFD /* Swiftlint */ = {
@@ -816,7 +787,22 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
-		A4178BD6855E5BDC434A9915 /* [CP] Check Pods Manifest.lock */ = {
+		A6B0122A57EF42CCD131A668 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests-DGDependencyInjectorTests-OSX/Pods-Tests-DGDependencyInjectorTests-OSX-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B76AAFBE9404F84E12408436 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -831,7 +817,7 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		A7DBA28B5F8536475EE842BB /* [CP] Embed Pods Frameworks */ = {
+		BACFE2E7D0DE940C6C942CD6 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -843,10 +829,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests-DGDependencyInjectorTests-iOS/Pods-Tests-DGDependencyInjectorTests-iOS-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests-DGDependencyInjectorTests-tvOS/Pods-Tests-DGDependencyInjectorTests-tvOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B5214ED48C416DD9E7F1AD31 /* [CP] Check Pods Manifest.lock */ = {
+		D8ED7383CE3F15FCED55C1E1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -861,6 +847,66 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		DBB7EC2034AD8777DA268146 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests-DGDependencyInjectorTests-iOS/Pods-Tests-DGDependencyInjectorTests-iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E351319E7D55209F629AF19F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Frameworks-DGDependencyInjector-iOS/Pods-Frameworks-DGDependencyInjector-iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F36F5DA75DFD62AE6E995E0E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F81E119997F62508A22B855E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Frameworks-DGDependencyInjector-watchOS/Pods-Frameworks-DGDependencyInjector-watchOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -868,7 +914,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3169DD61DE0631900BABAFD /* TemplateClass.swift in Sources */,
+				A37058D21E5DE3A0009D0739 /* DependencyModule.swift in Sources */,
+				A37058CE1E5DE3A0009D0739 /* DependencyInjector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -876,7 +923,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A38EF2CA1DECF97000637484 /* DGDependencyInjectorTests.swift in Sources */,
+				A37058DB1E5DE4ED009D0739 /* Cat.swift in Sources */,
+				A37058F01E5DE500009D0739 /* SimpleDependencyInjectorTests.swift in Sources */,
+				A37058EA1E5DE500009D0739 /* ClassDependencyInjectorTests.swift in Sources */,
+				A37058DE1E5DE4ED009D0739 /* Dog.swift in Sources */,
+				A37058E11E5DE4ED009D0739 /* IAnimal.swift in Sources */,
+				A37058E41E5DE4ED009D0739 /* PetOwner.swift in Sources */,
+				A37058ED1E5DE500009D0739 /* DepthClassDependencyInjectorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -884,7 +937,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3169DE81DE06FD100BABAFD /* TemplateClass.swift in Sources */,
+				A37058D31E5DE3A0009D0739 /* DependencyModule.swift in Sources */,
+				A37058CF1E5DE3A0009D0739 /* DependencyInjector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -892,7 +946,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3EAC50D1DE5FCBB00E4AA5E /* TemplateClass.swift in Sources */,
+				A37058D41E5DE3A0009D0739 /* DependencyModule.swift in Sources */,
+				A37058D01E5DE3A0009D0739 /* DependencyInjector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -900,7 +955,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A38EF2CB1DECF97000637484 /* DGDependencyInjectorTests.swift in Sources */,
+				A37058DC1E5DE4ED009D0739 /* Cat.swift in Sources */,
+				A37058F11E5DE500009D0739 /* SimpleDependencyInjectorTests.swift in Sources */,
+				A37058EB1E5DE500009D0739 /* ClassDependencyInjectorTests.swift in Sources */,
+				A37058DF1E5DE4ED009D0739 /* Dog.swift in Sources */,
+				A37058E21E5DE4ED009D0739 /* IAnimal.swift in Sources */,
+				A37058E51E5DE4ED009D0739 /* PetOwner.swift in Sources */,
+				A37058EE1E5DE500009D0739 /* DepthClassDependencyInjectorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -908,7 +969,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3EAC50C1DE5FCBA00E4AA5E /* TemplateClass.swift in Sources */,
+				A37058D51E5DE3A0009D0739 /* DependencyModule.swift in Sources */,
+				A37058D11E5DE3A0009D0739 /* DependencyInjector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -916,7 +978,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A38EF2CC1DECF97000637484 /* DGDependencyInjectorTests.swift in Sources */,
+				A37058DD1E5DE4ED009D0739 /* Cat.swift in Sources */,
+				A37058F21E5DE500009D0739 /* SimpleDependencyInjectorTests.swift in Sources */,
+				A37058EC1E5DE500009D0739 /* ClassDependencyInjectorTests.swift in Sources */,
+				A37058E01E5DE4ED009D0739 /* Dog.swift in Sources */,
+				A37058E31E5DE4ED009D0739 /* IAnimal.swift in Sources */,
+				A37058E61E5DE4ED009D0739 /* PetOwner.swift in Sources */,
+				A37058EF1E5DE500009D0739 /* DepthClassDependencyInjectorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1042,7 +1110,7 @@
 		};
 		A3169DC51DE05E8300BABAFD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A1E526842654D5A6ABA0401A /* Pods-Frameworks-DGDependencyInjector-iOS.debug.xcconfig */;
+			baseConfigurationReference = 2053E619579DE23A48C73C9C /* Pods-Frameworks-DGDependencyInjector-iOS.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1057,12 +1125,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.digipolitan.dependencyinjector;
 				PRODUCT_NAME = DGDependencyInjector;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		A3169DC61DE05E8300BABAFD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A5CB5486D945AEB4B0A6C7EA /* Pods-Frameworks-DGDependencyInjector-iOS.release.xcconfig */;
+			baseConfigurationReference = 1448BF010D6580639D0657F4 /* Pods-Frameworks-DGDependencyInjector-iOS.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1077,14 +1147,15 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.digipolitan.dependencyinjector;
 				PRODUCT_NAME = DGDependencyInjector;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		A3169DC81DE05E8300BABAFD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A9BEB56823DA93E4E8873218 /* Pods-Tests-DGDependencyInjectorTests-iOS.debug.xcconfig */;
+			baseConfigurationReference = B48898EE97550803EF4AB578 /* Pods-Tests-DGDependencyInjectorTests-iOS.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 582762VK3P;
 				INFOPLIST_FILE = Tests/Info.plist;
@@ -1096,9 +1167,9 @@
 		};
 		A3169DC91DE05E8300BABAFD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 940A92CADB492F30B53A3914 /* Pods-Tests-DGDependencyInjectorTests-iOS.release.xcconfig */;
+			baseConfigurationReference = A98F76A110CFE94B8F35FDAA /* Pods-Tests-DGDependencyInjectorTests-iOS.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 582762VK3P;
 				INFOPLIST_FILE = Tests/Info.plist;
@@ -1110,7 +1181,7 @@
 		};
 		A3169DE41DE06EF400BABAFD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BF3ED8D7257B66C8271511A3 /* Pods-Frameworks-DGDependencyInjector-watchOS.debug.xcconfig */;
+			baseConfigurationReference = 806CEF756C404A8188FA4759 /* Pods-Frameworks-DGDependencyInjector-watchOS.debug.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -1126,6 +1197,8 @@
 				PRODUCT_NAME = DGDependencyInjector;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -1133,7 +1206,7 @@
 		};
 		A3169DE51DE06EF400BABAFD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 99F16A9C7FA6842EF887491B /* Pods-Frameworks-DGDependencyInjector-watchOS.release.xcconfig */;
+			baseConfigurationReference = 56DA6E93DFB445F3C547AA7D /* Pods-Frameworks-DGDependencyInjector-watchOS.release.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -1149,6 +1222,7 @@
 				PRODUCT_NAME = DGDependencyInjector;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -1156,7 +1230,7 @@
 		};
 		A3169E011DE0718900BABAFD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CEBD22867FB8D7682731847B /* Pods-Frameworks-DGDependencyInjector-tvOS.debug.xcconfig */;
+			baseConfigurationReference = 06A4F07E6E9F15EC544A4BC4 /* Pods-Frameworks-DGDependencyInjector-tvOS.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1172,6 +1246,7 @@
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
@@ -1179,7 +1254,7 @@
 		};
 		A3169E021DE0718900BABAFD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 73856367D216DCC12A3A1D40 /* Pods-Frameworks-DGDependencyInjector-tvOS.release.xcconfig */;
+			baseConfigurationReference = 918FC3B9DAF941D1592B143D /* Pods-Frameworks-DGDependencyInjector-tvOS.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1194,6 +1269,7 @@
 				PRODUCT_NAME = DGDependencyInjector;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
@@ -1201,9 +1277,9 @@
 		};
 		A3169E041DE0718900BABAFD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 87F8670488A3622145762F73 /* Pods-Tests-DGDependencyInjectorTests-tvOS.debug.xcconfig */;
+			baseConfigurationReference = 5600FD8A1C64D47B1FA0AC05 /* Pods-Tests-DGDependencyInjectorTests-tvOS.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 582762VK3P;
 				INFOPLIST_FILE = Tests/Info.plist;
@@ -1217,9 +1293,9 @@
 		};
 		A3169E051DE0718900BABAFD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C2C5A4ACE6006352B65FF144 /* Pods-Tests-DGDependencyInjectorTests-tvOS.release.xcconfig */;
+			baseConfigurationReference = 014B18FE46E10FAF1ED57221 /* Pods-Tests-DGDependencyInjectorTests-tvOS.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 582762VK3P;
 				INFOPLIST_FILE = Tests/Info.plist;
@@ -1233,7 +1309,7 @@
 		};
 		A3169E1E1DE072C800BABAFD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 362F3DCDB3DB28CF0DDD32F3 /* Pods-Frameworks-DGDependencyInjector-OSX.debug.xcconfig */;
+			baseConfigurationReference = 04E9350472F8797657D900A2 /* Pods-Frameworks-DGDependencyInjector-OSX.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -1252,12 +1328,13 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		A3169E1F1DE072C800BABAFD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FA41C7A6E5622C691CB802A4 /* Pods-Frameworks-DGDependencyInjector-OSX.release.xcconfig */;
+			baseConfigurationReference = 528C4B0F7B1CB5272A3D467B /* Pods-Frameworks-DGDependencyInjector-OSX.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -1275,14 +1352,15 @@
 				PRODUCT_NAME = DGDependencyInjector;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		A3169E211DE072C800BABAFD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D8FFC9EDA48D0257AEC95EA7 /* Pods-Tests-DGDependencyInjectorTests-OSX.debug.xcconfig */;
+			baseConfigurationReference = E5DEC4FF72E053748F1B87EE /* Pods-Tests-DGDependencyInjectorTests-OSX.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 582762VK3P;
@@ -1297,9 +1375,9 @@
 		};
 		A3169E221DE072C800BABAFD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0508284D0D5D6BBC9BFF2555 /* Pods-Tests-DGDependencyInjectorTests-OSX.release.xcconfig */;
+			baseConfigurationReference = 76069B1202C521F2393854F5 /* Pods-Tests-DGDependencyInjectorTests-OSX.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 582762VK3P;
