@@ -1,4 +1,5 @@
 import XCTest
+
 @testable import DGDependencyInjector
 
 class ClassDependencyInjectorTests: XCTestCase {
