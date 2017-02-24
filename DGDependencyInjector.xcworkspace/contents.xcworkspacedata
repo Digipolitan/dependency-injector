@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:DGDependencyInjector.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Samples/DGDependencyInjectorSample-iOS/DGDependencyInjectorSample-iOS.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Samples/DGDependencyInjectorSample-watchOS/DGDependencyInjectorSample-watchOS.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Samples/DGDependencyInjectorSample-tvOS/DGDependencyInjectorSample-tvOS.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Samples/DGDependencyInjectorSample-OSX/DGDependencyInjectorSample-OSX.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>
