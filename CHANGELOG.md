@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [1.1.1](https://github.com/Digipolitan/dependency-injector-swift/releases/tag/v1.1.1)
+
+remove unused methods
+add builder pattern
+
+---
+
 ## [1.1.0](https://github.com/Digipolitan/dependency-injector-swift/releases/tag/v1.1.0)
 
 Moving project from dependencies-injector-pure-swift
