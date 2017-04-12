@@ -256,14 +256,14 @@
 		A3169DCF1DE062A000BABAFD /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				A37058D61E5DE4ED009D0739 /* Domains */,
+				A37058D61E5DE4ED009D0739 /* Domain */,
 				A38EF2C61DECF97000637484 /* DGDependencyInjectorTests */,
 				A3169DD11DE062A000BABAFD /* Info.plist */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
 		};
-		A37058D61E5DE4ED009D0739 /* Domains */ = {
+		A37058D61E5DE4ED009D0739 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
 				A37058D71E5DE4ED009D0739 /* Cat.swift */,
@@ -271,6 +271,7 @@
 				A37058D91E5DE4ED009D0739 /* IAnimal.swift */,
 				A37058DA1E5DE4ED009D0739 /* PetOwner.swift */,
 			);
+			name = Domain;
 			path = Domains;
 			sourceTree = "<group>";
 		};

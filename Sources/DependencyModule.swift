@@ -30,21 +30,12 @@ open class DependencyModule {
     }
 
     /**
-     * Registers a provider for the given Type and for the default scope
-     * @param type The Type used for injection
-     * @param provider The provider used to inject an object of Type T
-     */
-    open func register<T>(type: T.Type, provider: @escaping (DependencyInjector, [String: Any]?) -> T?) {
-         self.register(type: type, scope: nil, provider: provider)
-    }
-
-    /**
      * Registers a provider for the given Type
      * @param type The Type used for injection
      * @param scope The custom scope, give nil to use default scope
      * @param provider The provider used to inject an object of Type T
      */
-    open func register<T>(type: T.Type, scope: String?, provider: @escaping (DependencyInjector, [String: Any]?) -> T?) {
+    open func register<T>(type: T.Type, scope: String? = nil, provider: @escaping (DependencyInjector, [String: Any]?) -> T?) {
         let reference = String(describing: type)
         var record = self.records[reference] ?? [:]
         record[scope ?? DependencyModule.defaultScope] = provider
