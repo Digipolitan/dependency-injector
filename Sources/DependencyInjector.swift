@@ -23,12 +23,11 @@ open class DependencyInjector {
      * @return True on success, otherwise false
      */
     @discardableResult
-    open func register(module: DependencyModule) -> Bool {
+    open func register(module: DependencyModule) -> Self {
         if self.modules.index(of: module) == nil {
             self.modules.insert(module, at: 0)
-            return true
         }
-        return false
+        return self
     }
 
     /**
@@ -53,35 +52,13 @@ open class DependencyInjector {
 
     /**
      * Creates a new instance conforming the input Type
-     * The injector search the first module that can provide the injection (The default scope is used)
-     * @param type The given Type you want to inject
-     * @param arguments Used by the provider (Such as nonnull parameters for initializers)
-     * @return An injected object, nil if an error occurred
-     */
-    open func inject<T>(type: T.Type, arguments: [String: Any]?) -> T? {
-        return self.inject(type: type, scope: nil, arguments: arguments)
-    }
-
-    /**
-     * Creates a new instance conforming the input Type
-     * The injector search the first module that can provide the injection
-     * @param type The given Type you want to inject
-     * @param scope Custom scope, give nil to use default scope
-     * @return An injected object, nil if an error occurred
-     */
-    open func inject<T>(type: T.Type, scope: String?) -> T? {
-        return self.inject(type: type, scope: scope, arguments: nil)
-    }
-
-    /**
-     * Creates a new instance conforming the input Type
      * The injector search the first module that can provide the injection
      * @param type The given Type you want to inject
      * @param scope Custom scope, give nil to use default scope
      * @param arguments Used by the provider (Such as nonnull parameters for initializers)
      * @return An injected object, nil if an error occurred
      */
-    open func inject<T>(type: T.Type, scope: String?, arguments: [String: Any]?) -> T? {
+    open func inject<T>(type: T.Type, scope: String? = nil, arguments: [String: Any]? = nil) -> T? {
         for module in self.modules {
             if let provider = module.provider(type: type, scope: scope) {
                 return provider(self, arguments)
