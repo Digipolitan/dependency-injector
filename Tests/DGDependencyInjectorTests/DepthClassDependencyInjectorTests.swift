@@ -4,16 +4,15 @@ import XCTest
 
 class DepthClassDependencyInjectorTests: XCTestCase {
 
-    private var injector: DependencyInjector?
-
     override func setUp() {
         super.setUp()
-        let injector = DependencyInjector()
+
+        let injector = DependencyInjector.default
         let module = DependencyModule()
         module.register(type: PetOwner.self) { (injector, arguments) -> PetOwner? in
             if let name = arguments?["name"] as? String {
                 if let petArguments = arguments?["pet"] as? [String: Any] {
-                    return PetOwner(name: name, pet: injector.inject(type: IAnimal.self, arguments: petArguments))
+                    return PetOwner(name: name, pet: try? injector.inject(type: IAnimal.self, arguments: petArguments))
                 }
                 return PetOwner(name: name)
             }
@@ -26,11 +25,10 @@ class DepthClassDependencyInjectorTests: XCTestCase {
             return nil
         }
         injector.register(module: module)
-        self.injector = injector
     }
 
     func testPetOwnerInjection() {
-        let po = self.injector?.inject(type: PetOwner.self, arguments: [
+        let po = try? DependencyInjector.default.inject(type: PetOwner.self, arguments: [
             "name": "Bala"
         ])
         XCTAssertNotNil(po)
@@ -39,7 +37,7 @@ class DepthClassDependencyInjectorTests: XCTestCase {
     }
 
     func testPetOwnerInjectionWithAnimal() {
-        let po = self.injector?.inject(type: PetOwner.self, arguments: [
+        let po = try? DependencyInjector.default.inject(type: PetOwner.self, arguments: [
             "name": "Benoit",
             "pet": [
                 "name": "Athina"

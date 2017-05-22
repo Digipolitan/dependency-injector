@@ -4,12 +4,10 @@ import XCTest
 
 class ClassDependencyInjectorTests: XCTestCase {
 
-    private var injector: DependencyInjector?
-    private var otherInjector: DependencyInjector?
-
     override func setUp() {
         super.setUp()
-        let injector = DependencyInjector()
+
+        let injector = DependencyInjector.default
         let module = DependencyModule()
         module.register(type: IAnimal.self) { (_, arguments) -> IAnimal? in
             if let name = arguments?["name"] as? String {
@@ -17,10 +15,11 @@ class ClassDependencyInjectorTests: XCTestCase {
             }
             return nil
         }
-        injector.register(module: module)
-        self.injector = injector
+        module.register(type: IAnimal.self, scope: "singleton", provider: SingletonDependencyProvider(injectedType: Dog.self))
 
-        let otherInjector = DependencyInjector()
+        injector.register(module: module)
+
+        let otherInjector = DependencyInjector.instance(key: "random")
         let otherModule = DependencyModule()
         otherModule.register(type: IAnimal.self) { (_, arguments) -> IAnimal? in
             if let name = arguments?["name"] as? String {
@@ -29,11 +28,10 @@ class ClassDependencyInjectorTests: XCTestCase {
             return nil
         }
         otherInjector.register(module: otherModule)
-        self.otherInjector = otherInjector
     }
 
     func testDogInjection() {
-        let dog = self.injector?.inject(type: IAnimal.self, arguments: [
+        let dog = try? DependencyInjector.default.inject(type: IAnimal.self, arguments: [
             "name": "Athina"
             ])
         XCTAssertNotNil(dog)
@@ -41,15 +39,22 @@ class ClassDependencyInjectorTests: XCTestCase {
     }
 
     func testFailDogInjection() {
-        let dog = self.injector?.inject(type: IAnimal.self)
+        let dog = try? DependencyInjector.default.inject(type: IAnimal.self)
         XCTAssertNil(dog)
     }
 
     func testCatInjection() {
-        let cat = self.otherInjector?.inject(type: IAnimal.self, arguments: [
+        let cat = try? DependencyInjector.instance(key: "random").inject(type: IAnimal.self, arguments: [
             "name": "Billy"
             ])
         XCTAssertNotNil(cat)
         XCTAssert(cat!.name == "Billy", "Error during the Animal injection")
+    }
+
+    func testSingletonInjection() {
+        let animal = try? DependencyInjector.default.inject(type: IAnimal.self, scope: "singleton")
+        let animal2 = try? DependencyInjector.default.inject(type: IAnimal.self, scope: "singleton")
+        XCTAssertNotNil(animal)
+        XCTAssertTrue(animal! === animal2!)
     }
 }

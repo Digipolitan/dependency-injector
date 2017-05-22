@@ -5,8 +5,6 @@
  */
 open class DependencyModule {
 
-    typealias DependencyProvider = Any
-
     /** The default scope */
     open static let defaultScope = "_"
 
@@ -23,10 +21,19 @@ open class DependencyModule {
      *  ]
      * ]
      */
-    fileprivate var records: [String: [String: DependencyProvider]]
+    fileprivate var records: [String: [String: Any]]
 
     public init() {
         self.records = [:]
+    }
+
+    @discardableResult
+    open func register<T>(type: T.Type, scope: String = DependencyModule.defaultScope, provider: DependencyProvider<T>) -> Self {
+        let reference = String(describing: type)
+        var record = self.records[reference] ?? [:]
+        record[scope] = provider
+        self.records[reference] = record
+        return self
     }
 
     /**
@@ -35,11 +42,20 @@ open class DependencyModule {
      * @param scope The custom scope, give nil to use default scope
      * @param provider The provider used to inject an object of Type T
      */
-    open func register<T>(type: T.Type, scope: String? = nil, provider: @escaping (DependencyInjector, [String: Any]?) -> T?) {
-        let reference = String(describing: type)
-        var record = self.records[reference] ?? [:]
-        record[scope ?? DependencyModule.defaultScope] = provider
-        self.records[reference] = record
+    @discardableResult
+    open func register<T>(type: T.Type, scope: String = DependencyModule.defaultScope, handler: @escaping DependencyProvider<T>.DependencyHandler) -> Self {
+        return self.register(type: type, scope: scope, provider: DependencyProvider(handler: handler))
+    }
+
+    /**
+     * Registers a provider for the given Type
+     * @param type The Type used for injection
+     * @param scope The custom scope, give nil to use default scope
+     * @param provider The provider used to inject an object of Type T
+     */
+    @discardableResult
+    open func register<T>(type: T.Type, scope: String = DependencyModule.defaultScope, injectedType: Injectable.Type) -> Self {
+        return self.register(type: type, scope: scope, provider: DependencyProvider(injectedType: injectedType))
     }
 
     /**
@@ -48,15 +64,13 @@ open class DependencyModule {
      * @param scope The scope, give nil to use default scope
      * @return The provider or nil if no provider are registered with the given type and scope
      */
-    open func provider<T>(type: T.Type, scope: String? = nil) -> ((DependencyInjector, [String: Any]?) -> T?)? {
+    open func provider<T>(type: T.Type, scope: String? = nil) -> DependencyProvider<T>? {
         let reference = String(describing: type)
-        var provider: DependencyProvider? = nil
         if let record = self.records[reference] {
-            provider = record[scope ?? DependencyModule.defaultScope]
+            return record[scope ?? DependencyModule.defaultScope] as? DependencyProvider<T>
         }
-        return provider as? (DependencyInjector, [String: Any]?) -> T?
+        return nil
     }
-
 }
 
 extension DependencyModule: CustomStringConvertible {

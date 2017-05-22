@@ -10,9 +10,23 @@ open class DependencyInjector {
     public private(set) var modules: [DependencyModule]
 
     /** Retrieves the shared instance */
-    open static let shared = DependencyInjector()
+    open static let `default` = DependencyInjector.instance(key: DependencyInjector.defaultKey)
 
-    public init() {
+    private static var registry = [String: DependencyInjector]()
+
+    /** The default key */
+    private static let defaultKey = "_"
+
+    open static func instance(key: String) -> DependencyInjector {
+        if let stored = self.registry[key] {
+            return stored
+        }
+        let injector = DependencyInjector()
+        self.registry[key] = injector
+        return injector
+    }
+
+    private init() {
         self.modules = []
     }
 
@@ -34,20 +48,13 @@ open class DependencyInjector {
      * Removes the given module from the dependency injector
      * @param module The dependency module to be removed
      */
-    open func remove(module: DependencyModule) {
+    @discardableResult
+    open func remove(module: DependencyModule) -> Bool {
         if let i = self.modules.index(of: module) {
             self.modules.remove(at: i)
+            return true
         }
-    }
-
-    /**
-     * Creates a new instance conforming the input Type
-     * The injector search the first module that can provide the injection (The default scope is used)
-     * @param type The given Type to be injected
-     * @return An injected object, nil if an error occurred
-     */
-    open func inject<T>(type: T.Type) -> T? {
-        return self.inject(type: type, scope: nil, arguments: nil)
+        return false
     }
 
     /**
@@ -58,17 +65,23 @@ open class DependencyInjector {
      * @param arguments Used by the provider (Such as nonnull parameters for initializers)
      * @return An injected object, nil if an error occurred
      */
-    open func inject<T>(type: T.Type, scope: String? = nil, arguments: [String: Any]? = nil) -> T? {
+    open func inject<T>(type: T.Type, scope: String? = nil, arguments: [String: Any]? = nil) throws -> T {
         for module in self.modules {
             if let provider = module.provider(type: type, scope: scope) {
-                return provider(self, arguments)
+                if let res = try provider.provide(injector: self, arguments: arguments) {
+                    return res
+                }
             }
         }
         if scope != nil {
-            return self.inject(type: type, scope: nil, arguments: arguments)
+            return try self.inject(type: type, scope: nil, arguments: arguments)
         }
-        return nil
+        throw DependencyError.noDependencyProvided
     }
+}
+
+public enum DependencyError: Error {
+    case noDependencyProvided
 }
 
 extension DependencyInjector: CustomStringConvertible {
