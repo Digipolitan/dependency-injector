@@ -12,6 +12,7 @@
 		336121731A4B11D8913D2F73 /* Pods_Frameworks_DGDependencyInjector_watchOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 961395A6A9DCD7AEF1671CA5 /* Pods_Frameworks_DGDependencyInjector_watchOS.framework */; };
 		7AF74F1E069896FFB068C83E /* Pods_Frameworks_DGDependencyInjector_OSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A743FBDA0858CA5DE9BCB1 /* Pods_Frameworks_DGDependencyInjector_OSX.framework */; };
 		815DA10284D71562F6E30F08 /* Pods_Tests_DGDependencyInjectorTests_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD28BA6B0660391D8023F9E /* Pods_Tests_DGDependencyInjectorTests_iOS.framework */; };
+		A31232411ED5C90D00CDE125 /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31232401ED5C90C00CDE125 /* Injectable.swift */; };
 		A3169DBA1DE05E8300BABAFD /* DGDependencyInjector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3169DB01DE05E8300BABAFD /* DGDependencyInjector.framework */; };
 		A3169DF81DE0718900BABAFD /* DGDependencyInjector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3169DEF1DE0718900BABAFD /* DGDependencyInjector.framework */; };
 		A3169E151DE072C800BABAFD /* DGDependencyInjector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3169E0C1DE072C700BABAFD /* DGDependencyInjector.framework */; };
@@ -19,14 +20,14 @@
 		A3169E771DE083D900BABAFD /* DGDependencyInjector.h in Headers */ = {isa = PBXBuildFile; fileRef = A3169E751DE083D900BABAFD /* DGDependencyInjector.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A3169E781DE083D900BABAFD /* DGDependencyInjector.h in Headers */ = {isa = PBXBuildFile; fileRef = A3169E751DE083D900BABAFD /* DGDependencyInjector.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A3169E791DE083D900BABAFD /* DGDependencyInjector.h in Headers */ = {isa = PBXBuildFile; fileRef = A3169E751DE083D900BABAFD /* DGDependencyInjector.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A37058CE1E5DE3A0009D0739 /* DependencyInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37058CC1E5DE3A0009D0739 /* DependencyInjector.swift */; };
-		A37058CF1E5DE3A0009D0739 /* DependencyInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37058CC1E5DE3A0009D0739 /* DependencyInjector.swift */; };
-		A37058D01E5DE3A0009D0739 /* DependencyInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37058CC1E5DE3A0009D0739 /* DependencyInjector.swift */; };
-		A37058D11E5DE3A0009D0739 /* DependencyInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37058CC1E5DE3A0009D0739 /* DependencyInjector.swift */; };
-		A37058D21E5DE3A0009D0739 /* DependencyModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37058CD1E5DE3A0009D0739 /* DependencyModule.swift */; };
-		A37058D31E5DE3A0009D0739 /* DependencyModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37058CD1E5DE3A0009D0739 /* DependencyModule.swift */; };
-		A37058D41E5DE3A0009D0739 /* DependencyModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37058CD1E5DE3A0009D0739 /* DependencyModule.swift */; };
-		A37058D51E5DE3A0009D0739 /* DependencyModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37058CD1E5DE3A0009D0739 /* DependencyModule.swift */; };
+		A37058CE1E5DE3A0009D0739 /* Injector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37058CC1E5DE3A0009D0739 /* Injector.swift */; };
+		A37058CF1E5DE3A0009D0739 /* Injector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37058CC1E5DE3A0009D0739 /* Injector.swift */; };
+		A37058D01E5DE3A0009D0739 /* Injector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37058CC1E5DE3A0009D0739 /* Injector.swift */; };
+		A37058D11E5DE3A0009D0739 /* Injector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37058CC1E5DE3A0009D0739 /* Injector.swift */; };
+		A37058D21E5DE3A0009D0739 /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37058CD1E5DE3A0009D0739 /* Module.swift */; };
+		A37058D31E5DE3A0009D0739 /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37058CD1E5DE3A0009D0739 /* Module.swift */; };
+		A37058D41E5DE3A0009D0739 /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37058CD1E5DE3A0009D0739 /* Module.swift */; };
+		A37058D51E5DE3A0009D0739 /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37058CD1E5DE3A0009D0739 /* Module.swift */; };
 		A37058DB1E5DE4ED009D0739 /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37058D71E5DE4ED009D0739 /* Cat.swift */; };
 		A37058DC1E5DE4ED009D0739 /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37058D71E5DE4ED009D0739 /* Cat.swift */; };
 		A37058DD1E5DE4ED009D0739 /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37058D71E5DE4ED009D0739 /* Cat.swift */; };
@@ -48,10 +49,14 @@
 		A37058F01E5DE500009D0739 /* SimpleDependencyInjectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37058E91E5DE500009D0739 /* SimpleDependencyInjectorTests.swift */; };
 		A37058F11E5DE500009D0739 /* SimpleDependencyInjectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37058E91E5DE500009D0739 /* SimpleDependencyInjectorTests.swift */; };
 		A37058F21E5DE500009D0739 /* SimpleDependencyInjectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37058E91E5DE500009D0739 /* SimpleDependencyInjectorTests.swift */; };
-		A3F217641ECC5A3100BAD3E0 /* DependencyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F217631ECC5A3100BAD3E0 /* DependencyProvider.swift */; };
-		A3F217651ECC8D7600BAD3E0 /* DependencyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F217631ECC5A3100BAD3E0 /* DependencyProvider.swift */; };
-		A3F217661ECC8D7700BAD3E0 /* DependencyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F217631ECC5A3100BAD3E0 /* DependencyProvider.swift */; };
-		A3F217671ECC8D7800BAD3E0 /* DependencyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F217631ECC5A3100BAD3E0 /* DependencyProvider.swift */; };
+		A3A4D24F1ED4818900BF3EF4 /* Binder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A4D24E1ED4818900BF3EF4 /* Binder.swift */; };
+		A3A4D2501ED4818900BF3EF4 /* Binder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A4D24E1ED4818900BF3EF4 /* Binder.swift */; };
+		A3A4D2511ED4818900BF3EF4 /* Binder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A4D24E1ED4818900BF3EF4 /* Binder.swift */; };
+		A3A4D2521ED4818900BF3EF4 /* Binder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A4D24E1ED4818900BF3EF4 /* Binder.swift */; };
+		A3F217641ECC5A3100BAD3E0 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F217631ECC5A3100BAD3E0 /* Provider.swift */; };
+		A3F217651ECC8D7600BAD3E0 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F217631ECC5A3100BAD3E0 /* Provider.swift */; };
+		A3F217661ECC8D7700BAD3E0 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F217631ECC5A3100BAD3E0 /* Provider.swift */; };
+		A3F217671ECC8D7800BAD3E0 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F217631ECC5A3100BAD3E0 /* Provider.swift */; };
 		B0FC9D828A2FC5912F5BEADD /* Pods_Frameworks_DGDependencyInjector_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D092A52CD5C9E78D5BAB3B68 /* Pods_Frameworks_DGDependencyInjector_iOS.framework */; };
 		F4F67F9FC581FB4B3FE5592A /* Pods_Tests_DGDependencyInjectorTests_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30FBFA6B690D58961C4C6B4E /* Pods_Tests_DGDependencyInjectorTests_tvOS.framework */; };
 /* End PBXBuildFile section */
@@ -95,6 +100,7 @@
 		806CEF756C404A8188FA4759 /* Pods-Frameworks-DGDependencyInjector-watchOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Frameworks-DGDependencyInjector-watchOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Frameworks-DGDependencyInjector-watchOS/Pods-Frameworks-DGDependencyInjector-watchOS.debug.xcconfig"; sourceTree = "<group>"; };
 		918FC3B9DAF941D1592B143D /* Pods-Frameworks-DGDependencyInjector-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Frameworks-DGDependencyInjector-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Frameworks-DGDependencyInjector-tvOS/Pods-Frameworks-DGDependencyInjector-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		961395A6A9DCD7AEF1671CA5 /* Pods_Frameworks_DGDependencyInjector_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Frameworks_DGDependencyInjector_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A31232401ED5C90C00CDE125 /* Injectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Injectable.swift; sourceTree = "<group>"; };
 		A3169DB01DE05E8300BABAFD /* DGDependencyInjector.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DGDependencyInjector.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3169DB91DE05E8300BABAFD /* DGDependencyInjectorTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DGDependencyInjectorTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3169DCC1DE0629100BABAFD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -105,8 +111,8 @@
 		A3169E0C1DE072C700BABAFD /* DGDependencyInjector.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DGDependencyInjector.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3169E141DE072C800BABAFD /* DGDependencyInjectorTests-OSX.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DGDependencyInjectorTests-OSX.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3169E751DE083D900BABAFD /* DGDependencyInjector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGDependencyInjector.h; sourceTree = "<group>"; };
-		A37058CC1E5DE3A0009D0739 /* DependencyInjector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DependencyInjector.swift; sourceTree = "<group>"; };
-		A37058CD1E5DE3A0009D0739 /* DependencyModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DependencyModule.swift; sourceTree = "<group>"; };
+		A37058CC1E5DE3A0009D0739 /* Injector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Injector.swift; sourceTree = "<group>"; };
+		A37058CD1E5DE3A0009D0739 /* Module.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
 		A37058D71E5DE4ED009D0739 /* Cat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
 		A37058D81E5DE4ED009D0739 /* Dog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
 		A37058D91E5DE4ED009D0739 /* IAnimal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAnimal.swift; sourceTree = "<group>"; };
@@ -114,7 +120,8 @@
 		A37058E71E5DE500009D0739 /* ClassDependencyInjectorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassDependencyInjectorTests.swift; sourceTree = "<group>"; };
 		A37058E81E5DE500009D0739 /* DepthClassDependencyInjectorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepthClassDependencyInjectorTests.swift; sourceTree = "<group>"; };
 		A37058E91E5DE500009D0739 /* SimpleDependencyInjectorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleDependencyInjectorTests.swift; sourceTree = "<group>"; };
-		A3F217631ECC5A3100BAD3E0 /* DependencyProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DependencyProvider.swift; sourceTree = "<group>"; };
+		A3A4D24E1ED4818900BF3EF4 /* Binder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Binder.swift; sourceTree = "<group>"; };
+		A3F217631ECC5A3100BAD3E0 /* Provider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		A98F76A110CFE94B8F35FDAA /* Pods-Tests-DGDependencyInjectorTests-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-DGDependencyInjectorTests-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests-DGDependencyInjectorTests-iOS/Pods-Tests-DGDependencyInjectorTests-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		B48898EE97550803EF4AB578 /* Pods-Tests-DGDependencyInjectorTests-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-DGDependencyInjectorTests-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests-DGDependencyInjectorTests-iOS/Pods-Tests-DGDependencyInjectorTests-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		D092A52CD5C9E78D5BAB3B68 /* Pods_Frameworks_DGDependencyInjector_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Frameworks_DGDependencyInjector_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -251,10 +258,12 @@
 			isa = PBXGroup;
 			children = (
 				A3169E751DE083D900BABAFD /* DGDependencyInjector.h */,
-				A37058CC1E5DE3A0009D0739 /* DependencyInjector.swift */,
-				A37058CD1E5DE3A0009D0739 /* DependencyModule.swift */,
-				A3F217631ECC5A3100BAD3E0 /* DependencyProvider.swift */,
+				A37058CC1E5DE3A0009D0739 /* Injector.swift */,
+				A37058CD1E5DE3A0009D0739 /* Module.swift */,
+				A3F217631ECC5A3100BAD3E0 /* Provider.swift */,
 				A3169DCC1DE0629100BABAFD /* Info.plist */,
+				A3A4D24E1ED4818900BF3EF4 /* Binder.swift */,
+				A31232401ED5C90C00CDE125 /* Injectable.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -921,9 +930,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A37058D21E5DE3A0009D0739 /* DependencyModule.swift in Sources */,
-				A3F217641ECC5A3100BAD3E0 /* DependencyProvider.swift in Sources */,
-				A37058CE1E5DE3A0009D0739 /* DependencyInjector.swift in Sources */,
+				A3A4D24F1ED4818900BF3EF4 /* Binder.swift in Sources */,
+				A37058D21E5DE3A0009D0739 /* Module.swift in Sources */,
+				A3F217641ECC5A3100BAD3E0 /* Provider.swift in Sources */,
+				A31232411ED5C90D00CDE125 /* Injectable.swift in Sources */,
+				A37058CE1E5DE3A0009D0739 /* Injector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -945,9 +956,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3F217651ECC8D7600BAD3E0 /* DependencyProvider.swift in Sources */,
-				A37058D31E5DE3A0009D0739 /* DependencyModule.swift in Sources */,
-				A37058CF1E5DE3A0009D0739 /* DependencyInjector.swift in Sources */,
+				A3A4D2501ED4818900BF3EF4 /* Binder.swift in Sources */,
+				A3F217651ECC8D7600BAD3E0 /* Provider.swift in Sources */,
+				A37058D31E5DE3A0009D0739 /* Module.swift in Sources */,
+				A37058CF1E5DE3A0009D0739 /* Injector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -955,9 +967,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3F217661ECC8D7700BAD3E0 /* DependencyProvider.swift in Sources */,
-				A37058D41E5DE3A0009D0739 /* DependencyModule.swift in Sources */,
-				A37058D01E5DE3A0009D0739 /* DependencyInjector.swift in Sources */,
+				A3A4D2511ED4818900BF3EF4 /* Binder.swift in Sources */,
+				A3F217661ECC8D7700BAD3E0 /* Provider.swift in Sources */,
+				A37058D41E5DE3A0009D0739 /* Module.swift in Sources */,
+				A37058D01E5DE3A0009D0739 /* Injector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -979,9 +992,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3F217671ECC8D7800BAD3E0 /* DependencyProvider.swift in Sources */,
-				A37058D51E5DE3A0009D0739 /* DependencyModule.swift in Sources */,
-				A37058D11E5DE3A0009D0739 /* DependencyInjector.swift in Sources */,
+				A3A4D2521ED4818900BF3EF4 /* Binder.swift in Sources */,
+				A3F217671ECC8D7800BAD3E0 /* Provider.swift in Sources */,
+				A37058D51E5DE3A0009D0739 /* Module.swift in Sources */,
+				A37058D11E5DE3A0009D0739 /* Injector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

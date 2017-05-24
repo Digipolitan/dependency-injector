@@ -4,6 +4,7 @@ import XCTest
 
 class DepthClassDependencyInjectorTests: XCTestCase {
 
+    /*
     override func setUp() {
         super.setUp()
 
@@ -49,4 +50,5 @@ class DepthClassDependencyInjectorTests: XCTestCase {
         XCTAssert(type(of: po!.pet!) == Dog.self, "Error during the Animal injection")
         XCTAssert(po!.pet!.name == "Athina", "Error during the Animal injection")
     }
+ */
 }

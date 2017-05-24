@@ -4,25 +4,25 @@
  * @author Benoit BRIATTE http://www.digipolitan.com
  * @copyright 2016 Digipolitan. All rights reserved.
  */
-open class DependencyInjector {
+open class Injector {
 
-    /** Retrieves the list of DependencyModule */
-    public private(set) var modules: [DependencyModule]
+    /** Retrieves the list of Module */
+    public private(set) var modules: [Module]
 
     /** Retrieves the shared instance */
-    open static let `default` = DependencyInjector.instance(key: DependencyInjector.defaultKey)
+    open static let `default` = Injector.instance(scope: Injector.defaultScope)
 
-    private static var registry = [String: DependencyInjector]()
+    private static var registry = [String: Injector]()
 
     /** The default key */
-    private static let defaultKey = "_"
+    private static let defaultScope = "_"
 
-    open static func instance(key: String) -> DependencyInjector {
-        if let stored = self.registry[key] {
+    open static func instance(scope: String) -> Injector {
+        if let stored = self.registry[scope] {
             return stored
         }
-        let injector = DependencyInjector()
-        self.registry[key] = injector
+        let injector = Injector()
+        self.registry[scope] = injector
         return injector
     }
 
@@ -37,7 +37,7 @@ open class DependencyInjector {
      * @return True on success, otherwise false
      */
     @discardableResult
-    open func register(module: DependencyModule) -> Self {
+    open func register(module: Module) -> Self {
         if self.modules.index(of: module) == nil {
             self.modules.insert(module, at: 0)
         }
@@ -49,7 +49,7 @@ open class DependencyInjector {
      * @param module The dependency module to be removed
      */
     @discardableResult
-    open func remove(module: DependencyModule) -> Bool {
+    open func remove(module: Module) -> Bool {
         if let i = self.modules.index(of: module) {
             self.modules.remove(at: i)
             return true
@@ -65,16 +65,13 @@ open class DependencyInjector {
      * @param arguments Used by the provider (Such as nonnull parameters for initializers)
      * @return An injected object, nil if an error occurred
      */
-    open func inject<T>(type: T.Type, scope: String? = nil, arguments: [String: Any]? = nil) throws -> T {
+    open func inject<T>(_ type: T.Type, arguments: [String: Any]? = nil) throws -> T {
         for module in self.modules {
-            if let provider = module.provider(type: type, scope: scope) {
-                if let res = try provider.provide(injector: self, arguments: arguments) {
+            if let provider = module.provider(for: type) {
+                if let res = try provider.get(injector: self, arguments: arguments) {
                     return res
                 }
             }
-        }
-        if scope != nil {
-            return try self.inject(type: type, scope: nil, arguments: arguments)
         }
         throw DependencyError.noDependencyProvided
     }
@@ -84,15 +81,15 @@ public enum DependencyError: Error {
     case noDependencyProvided
 }
 
-extension DependencyInjector: CustomStringConvertible {
+extension Injector: CustomStringConvertible {
     open var description: String {
         return "[\(type(of: self)) modules=\(self.modules)]"
     }
 }
 
-extension DependencyInjector: Equatable {
+extension Injector: Equatable {
 
-    public static func == (lhs: DependencyInjector, rhs: DependencyInjector) -> Bool {
+    public static func == (lhs: Injector, rhs: Injector) -> Bool {
         if lhs === rhs {
             return true
         }

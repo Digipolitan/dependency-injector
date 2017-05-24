@@ -2,18 +2,15 @@
 
 open class Dog: IAnimal, Injectable {
 
-    public enum Keys {
-        public static let name = "name"
+    public required init(injector: Injector, arguments: [String : Any]?) throws {
+        self.name = try Cast.ensure(obj: arguments?[IAnimalKeys.name])
     }
 
     public var name: String
+    public var test: Cat?
 
     public init(name: String) {
         self.name = name
-    }
-
-    public required init(injector: DependencyInjector, arguments: [String : Any]?) throws {
-        self.name = try Cast.ensure(obj: arguments?[Keys.name], to: String.self)
     }
 
     public func scream() -> String {
@@ -21,9 +18,9 @@ open class Dog: IAnimal, Injectable {
     }
 }
 
-public class AnyConverter {
+public class Converter<Source, Target> {
 
-    public typealias ConverterHandler = (Any) throws -> Any
+    public typealias ConverterHandler = (Source) throws -> Target
 
     private let handler: ConverterHandler
 
@@ -31,7 +28,7 @@ public class AnyConverter {
         self.handler = handler
     }
 
-    public func convert(value: Any) throws -> Any {
+    public func convert(value: Source) throws -> Target {
         return try self.handler(value)
     }
 }
@@ -39,7 +36,7 @@ public class AnyConverter {
 public class Cast {
 
     private var defaultValues: [String: Any]
-    private var converters: [String: [String: AnyConverter]]
+    private var converters: [String: [String: Any]]
 
     private init() {
         self.defaultValues = [:]
@@ -48,7 +45,6 @@ public class Cast {
     }
 
     public enum CastError: Error {
-        case invalidInputType
         case noConverterFound
         case noDefaultValueFound
     }
@@ -59,12 +55,7 @@ public class Cast {
         let src = String(describing: Source.self)
         let target = String(describing: Target.self)
         var record = self.converters[src] ?? [:]
-        record[target] = AnyConverter { v in
-            if let src = v as? Source {
-                return try converter(src)
-            }
-            throw CastError.invalidInputType
-        }
+        record[target] = Converter(handler: converter)
         self.converters[src] = record
     }
 
@@ -72,15 +63,15 @@ public class Cast {
         self.defaultValues[String(describing: Target.self)] = defaultValue
     }
 
-    public func converter<Source, Target>(from source: Source, to targetType: Target.Type) -> AnyConverter? {
+    public func converter<Source, Target>(from source: Source, to targetType: Target.Type) -> Converter<Source, Target>? {
         var mirror = Mirror(reflecting: source)
         let target = String(describing: targetType)
         if let record = self.converters[String(describing: mirror.subjectType)] {
-            return record[target]
+            return record[target] as? Converter<Source, Target>
         }
         while let parent = mirror.superclassMirror {
             if let record = self.converters[String(describing: parent.subjectType)] {
-                return record[target]
+                return record[target] as? Converter<Source, Target>
             }
             mirror = parent
         }
@@ -183,43 +174,42 @@ public class Cast {
         }
     }
 
-    public static func ensure<T>(obj: Any?, to type: T.Type) throws -> T {
+    public static func ensure<T>(obj: Any?) throws -> T {
         if let res = obj as? T {
             return res
         }
         if let unwrap = obj {
-            if let converter = Cast.default.converter(from: unwrap, to: type),
-                let res = try converter.convert(value: unwrap) as? T {
-                return res
+            if let converter = Cast.default.converter(from: unwrap, to: T.self) {
+                return try converter.convert(value: unwrap)
             }
             throw CastError.noConverterFound
         }
-        if let defaultValue = Cast.default.defaultValue(of: type) {
+        if let defaultValue = Cast.default.defaultValue(of: T.self) {
             return defaultValue
         }
         throw CastError.noDefaultValueFound
     }
 
-    public static func ensure<T>(collection: [Any]?, of genericType: T.Type) throws -> [T] {
+    public static func ensure<T>(collection: [Any]?) throws -> [T] {
         if let res = collection as? [T] {
             return res
         }
         if let unwrap = collection {
             return try unwrap.map({ (obj) -> T in
-                return try self.ensure(obj: obj, to: genericType)
+                return try self.ensure(obj: obj)
             })
         }
         return [T]()
     }
 
-    public static func ensure<IK: Hashable, K: Hashable, V>(dictionary: [IK: Any]?, of genericTypes: (K.Type, V.Type)) throws -> [K: V] {
+    public static func ensure<IK: Hashable, K: Hashable, V>(dictionary: [IK: Any]?) throws -> [K: V] {
         if let res = dictionary as? [K: V] {
             return res
         }
         var res = [K: V]()
         if let unwrap = dictionary {
             for (key, value) in unwrap {
-                res[try self.ensure(obj: key, to: genericTypes.0)] = try self.ensure(obj: value, to: genericTypes.1)
+                res[try self.ensure(obj: key)] = try self.ensure(obj: value)
             }
         }
         return res

@@ -4,3 +4,7 @@ public protocol IAnimal: class {
 
     func scream() -> String
 }
+
+public enum IAnimalKeys {
+    static let name = "name"
+}
