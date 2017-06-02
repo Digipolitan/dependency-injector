@@ -1,11 +1,5 @@
-//
-//  DependencyProvider.swift
-//  DGDependencyInjector
-//
-//  Created by Benoit BRIATTE on 17/05/2017.
-//  Copyright © 2017 Digipolitan. All rights reserved.
-//
-
+/**
+ */
 open class Provider<T> {
 
     public typealias ProviderHandler = (Injector, [String: Any]?) throws -> T?
@@ -30,7 +24,7 @@ open class Provider<T> {
     }
 }
 
-open final class SingletonProvider<T>: Provider<T> {
+public final class SingletonProvider<T>: Provider<T> {
 
     private var cache: T?
 

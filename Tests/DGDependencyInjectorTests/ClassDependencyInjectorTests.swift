@@ -23,6 +23,14 @@ class ClassDependencyInjectorTests: XCTestCase {
         otherInjector.register(module: other)
     }
 
+    override func tearDown() {
+        super.tearDown()
+
+        Injector.default.modules.forEach { (m) in
+            Injector.default.remove(module: m)
+        }
+    }
+
     func testDogInjection() {
         let dog = try? Injector.default.inject(IAnimal.self, arguments: [
             IAnimalKeys.name: "Athina"
@@ -38,8 +46,8 @@ class ClassDependencyInjectorTests: XCTestCase {
     }
 
     func testSingletonInjection() {
-        let animal = try? Injector.default.inject(IAnimal.self)
-        let animal2 = try? Injector.default.inject(IAnimal.self)
+        let animal = try? Injector.instance(scope: "custom").inject(IAnimal.self)
+        let animal2 = try? Injector.instance(scope: "custom").inject(IAnimal.self)
         XCTAssertNotNil(animal)
         XCTAssertTrue(animal! === animal2!)
     }

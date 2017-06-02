@@ -1,14 +1,6 @@
-//
-//  DependencyBinder.swift
-//  DGDependencyInjector
-//
-//  Created by Benoit BRIATTE on 23/05/2017.
-//  Copyright © 2017 Digipolitan. All rights reserved.
-//
-
-import Foundation
-
-open class Binder<T> {
+/**
+ */
+public final class Binder<T> {
 
     private var _singleton: Bool
     private var _provider: Provider<T>?

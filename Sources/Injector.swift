@@ -79,6 +79,7 @@ open class Injector {
 
 public enum DependencyError: Error {
     case noDependencyProvided
+    case initializationFailed
 }
 
 extension Injector: CustomStringConvertible {
