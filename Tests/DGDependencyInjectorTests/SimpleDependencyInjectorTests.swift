@@ -30,14 +30,10 @@ class SimpleDependencyInjectorTests: XCTestCase {
         super.tearDown()
 
         let injector = Injector.default
-        injector.modules.forEach { (m) in
-            injector.remove(module: m)
-        }
+        injector.modules.forEach { injector.remove(module: $0) }
 
         let other = Injector.instance(scope: "special")
-        other.modules.forEach { (m) in
-            other.remove(module: m)
-        }
+        other.modules.forEach { other.remove(module: $0) }
     }
 
     func testStringInjection() {

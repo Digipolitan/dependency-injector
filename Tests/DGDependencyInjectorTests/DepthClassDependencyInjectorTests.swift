@@ -24,10 +24,7 @@ class DepthClassDependencyInjectorTests: XCTestCase {
 
     override func tearDown() {
         super.tearDown()
-
-        Injector.default.modules.forEach { (m) in
-            Injector.default.remove(module: m)
-        }
+        Injector.default.modules.forEach { Injector.default.remove(module: $0) }
     }
 
     func testPetOwnerInjection() {
