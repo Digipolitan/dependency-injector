@@ -2,17 +2,31 @@
  * Lightweight dependency injector
  * Register modules and inject objects, use the singleton to share the injector inside your application
  * @author Benoit BRIATTE http://www.digipolitan.com
- * @copyright 2016 Digipolitan. All rights reserved.
+ * @copyright 2017 Digipolitan. All rights reserved.
  */
-open class DependencyInjector {
+open class Injector {
 
-    /** Retrieves the list of DependencyModule */
-    public private(set) var modules: [DependencyModule]
+    /** Retrieves the list of Module */
+    public private(set) var modules: [Module]
 
     /** Retrieves the shared instance */
-    open static let shared = DependencyInjector()
+    open static let `default` = Injector.instance(scope: Injector.defaultScope)
 
-    public init() {
+    private static var registry = [String: Injector]()
+
+    /** The default key */
+    private static let defaultScope = "_"
+
+    open static func instance(scope: String) -> Injector {
+        if let stored = self.registry[scope] {
+            return stored
+        }
+        let injector = Injector()
+        self.registry[scope] = injector
+        return injector
+    }
+
+    private init() {
         self.modules = []
     }
 
@@ -23,7 +37,7 @@ open class DependencyInjector {
      * @return True on success, otherwise false
      */
     @discardableResult
-    open func register(module: DependencyModule) -> Self {
+    open func register(module: Module) -> Self {
         if self.modules.index(of: module) == nil {
             self.modules.insert(module, at: 0)
         }
@@ -34,52 +48,51 @@ open class DependencyInjector {
      * Removes the given module from the dependency injector
      * @param module The dependency module to be removed
      */
-    open func remove(module: DependencyModule) {
+    @discardableResult
+    open func remove(module: Module) -> Bool {
         if let i = self.modules.index(of: module) {
             self.modules.remove(at: i)
+            return true
         }
-    }
-
-    /**
-     * Creates a new instance conforming the input Type
-     * The injector search the first module that can provide the injection (The default scope is used)
-     * @param type The given Type to be injected
-     * @return An injected object, nil if an error occurred
-     */
-    open func inject<T>(type: T.Type) -> T? {
-        return self.inject(type: type, scope: nil, arguments: nil)
+        return false
     }
 
     /**
      * Creates a new instance conforming the input Type
      * The injector search the first module that can provide the injection
      * @param type The given Type you want to inject
-     * @param scope Custom scope, give nil to use default scope
      * @param arguments Used by the provider (Such as nonnull parameters for initializers)
-     * @return An injected object, nil if an error occurred
+     * @return An injected object
      */
-    open func inject<T>(type: T.Type, scope: String? = nil, arguments: [String: Any]? = nil) -> T? {
+    open func inject<T>(_ type: T.Type, arguments: [String: Any]? = nil) throws -> T {
         for module in self.modules {
-            if let provider = module.provider(type: type, scope: scope) {
-                return provider(self, arguments)
+            if let provider = module.provider(for: type) {
+                if let res = try provider.get(injector: self, arguments: arguments) {
+                    return res
+                }
             }
         }
-        if scope != nil {
-            return self.inject(type: type, scope: nil, arguments: arguments)
-        }
-        return nil
+        throw DependencyError.noDependencyProvided
     }
 }
 
-extension DependencyInjector: CustomStringConvertible {
+/**
+ * Dependency errors
+ */
+public enum DependencyError: Error {
+    case noDependencyProvided
+    case initializationFailed
+}
+
+extension Injector: CustomStringConvertible {
     open var description: String {
         return "[\(type(of: self)) modules=\(self.modules)]"
     }
 }
 
-extension DependencyInjector: Equatable {
+extension Injector: Equatable {
 
-    public static func == (lhs: DependencyInjector, rhs: DependencyInjector) -> Bool {
+    public static func == (lhs: Injector, rhs: Injector) -> Bool {
         if lhs === rhs {
             return true
         }

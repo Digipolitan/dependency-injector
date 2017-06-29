@@ -4,33 +4,32 @@ import XCTest
 
 class DepthClassDependencyInjectorTests: XCTestCase {
 
-    private var injector: DependencyInjector?
-
     override func setUp() {
         super.setUp()
-        let injector = DependencyInjector()
-        let module = DependencyModule()
-        module.register(type: PetOwner.self) { (injector, arguments) -> PetOwner? in
+
+        let injector = Injector.default
+        let module = Module()
+        module.bind(IAnimal.self).with { return Dog(name: $1?["name"] as? String ?? "Athina") }
+        module.bind(PetOwner.self).with { (injector, arguments) -> PetOwner? in
             if let name = arguments?["name"] as? String {
                 if let petArguments = arguments?["pet"] as? [String: Any] {
-                    return PetOwner(name: name, pet: injector.inject(type: IAnimal.self, arguments: petArguments))
+                    return PetOwner(name: name, pet: try? injector.inject(IAnimal.self, arguments: petArguments))
                 }
                 return PetOwner(name: name)
             }
             return nil
         }
-        module.register(type: IAnimal.self) { (_, arguments) -> IAnimal? in
-            if let name = arguments?["name"] as? String {
-                return Dog(name: name)
-            }
-            return nil
-        }
+        module.bind(IAnimal.self).to(Dog.self)
         injector.register(module: module)
-        self.injector = injector
+    }
+
+    override func tearDown() {
+        super.tearDown()
+        Injector.default.modules.forEach { Injector.default.remove(module: $0) }
     }
 
     func testPetOwnerInjection() {
-        let po = self.injector?.inject(type: PetOwner.self, arguments: [
+        let po = try? Injector.default.inject(PetOwner.self, arguments: [
             "name": "Bala"
         ])
         XCTAssertNotNil(po)
@@ -39,7 +38,7 @@ class DepthClassDependencyInjectorTests: XCTestCase {
     }
 
     func testPetOwnerInjectionWithAnimal() {
-        let po = self.injector?.inject(type: PetOwner.self, arguments: [
+        let po = try? Injector.default.inject(PetOwner.self, arguments: [
             "name": "Benoit",
             "pet": [
                 "name": "Athina"

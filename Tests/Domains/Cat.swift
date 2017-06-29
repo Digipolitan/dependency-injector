@@ -1,4 +1,6 @@
-open class Cat: IAnimal {
+@testable import DGDependencyInjector
+
+open class Cat: NSObject, IAnimal {
 
     public var name: String
 

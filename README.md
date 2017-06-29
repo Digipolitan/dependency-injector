@@ -7,7 +7,7 @@ DGDependencyInjector
 [![Platform](https://img.shields.io/cocoapods/p/DGDependencyInjector.svg?style=flat)](http://cocoadocs.org/docsets/DGDependencyInjector)
 [![Twitter](https://img.shields.io/badge/twitter-@Digipolitan-blue.svg?style=flat)](http://twitter.com/Digipolitan)
 
-Dependency injector made in pure Swift. Compatible for swift server-side and swift for iOS
+Dependency injector Swift. Compatible for swift server-side and swift for iOS
 
 ## Installation
 
@@ -25,13 +25,11 @@ pod 'DGDependencyInjector'
 
 ## The Basics
 
-First you must create a DependencyModule and register some providers
+First you must create a Module and register some providers
 
 ```swift
-let module = DependencyModule()
-module.register(type: IAnimal.self) { _ in
-  return Dog(name: "Athina")
-}
+let module = Module()
+module.bind(IAnimal.self).to(Dog.self)
 ```
 
 IAnimal is a protocol that MUST be implemented by the Dog class
@@ -44,9 +42,13 @@ public protocol IAnimal {
     func scream() -> String
 }
 
-open class Dog: IAnimal {
+open class Dog: IAnimal, Injectable {
 
     public var name: String
+
+    public required convenience init(injector: Injector, arguments: [String : Any]?) throws {
+        self.init(name: arguments?["name"] as? String ?? "Athina")
+    }
 
     init(name: String) {
         self.name = name
@@ -61,13 +63,13 @@ open class Dog: IAnimal {
 After that, you must register your module inside an injector
 
 ```swift
-DependencyInjector.shared.register(module: module)
+Injector.default.register(module: module)
 ```
 
 Finally, inject an IAnimal and retrieve a concrete class registered inside your module
 
 ```swift
-if let animal = DependencyInjector.shared.inject(type: IAnimal.self) {
+if let animal = try? Injector.default.inject(IAnimal.self) {
   print(animal.name) // print Athina
   print(animal.scream()) // print Barking
 }
@@ -80,30 +82,30 @@ if let animal = DependencyInjector.shared.inject(type: IAnimal.self) {
 Register a provider that handle arguments :
 
 ```swift
-let module = DependencyModule()
-module.register(type: IAnimal.self) { (_, arguments) -> IAnimal? in
+let module = Module()
+module.bind(IAnimal.self).with { (_, arguments) -> IAnimal? in
   if let name = arguments?["name"] as? String {
     return Dog(name: name)
   }
   return nil
 }
-DependencyInjector.shared.register(module: module)
+Injector.default.register(module: module)
 ```
 
 Inject an IAnimal with arguments Dictionary<String, Any> :
 
 ```swift
-if let animal = DependencyInjector.shared.inject(type: IAnimal.self, arguments: ["name": "Athina"]) {
+if let animal = Injector.default.inject(IAnimal.self, arguments: ["name": "Athina"]) {
   print(animal.name) // print Athina
   print(animal.scream()) // print Barking
 }
-if let otherAnimal = DependencyInjector.shared.inject(type: IAnimal.self, arguments: ["name": "Yoda"]) {
+if let otherAnimal = Injector.default.inject(IAnimal.self, arguments: ["name": "Yoda"]) {
   print(otherAnimal.name) // print Yoda
   print(otherAnimal.scream()) // print Barking
 }
 ```
 
-##Contributing
+## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for more details!
 
@@ -111,6 +113,6 @@ This project adheres to the [Contributor Covenant Code of Conduct](CODE_OF_CONDU
 By participating, you are expected to uphold this code. Please report
 unacceptable behavior to [contact@digipolitan.com](mailto:contact@digipolitan.com).
 
-##License
+## License
 
 DGDependencyInjector is licensed under the [BSD 3-Clause license](LICENSE).

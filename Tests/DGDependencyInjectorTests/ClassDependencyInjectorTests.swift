@@ -4,52 +4,48 @@ import XCTest
 
 class ClassDependencyInjectorTests: XCTestCase {
 
-    private var injector: DependencyInjector?
-    private var otherInjector: DependencyInjector?
-
     override func setUp() {
         super.setUp()
-        let injector = DependencyInjector()
-        let module = DependencyModule()
-        module.register(type: IAnimal.self) { (_, arguments) -> IAnimal? in
-            if let name = arguments?["name"] as? String {
-                return Dog(name: name)
-            }
-            return nil
-        }
-        injector.register(module: module)
-        self.injector = injector
 
-        let otherInjector = DependencyInjector()
-        let otherModule = DependencyModule()
-        otherModule.register(type: IAnimal.self) { (_, arguments) -> IAnimal? in
-            if let name = arguments?["name"] as? String {
-                return Cat(name: name)
-            }
-            return nil
+        let injector = Injector.default
+        let module = Module()
+        module.bind(PetOwner.self).with { (injector, _) -> PetOwner? in
+            let owner = PetOwner(name: "Hello")
+            owner.pet = try injector.inject(IAnimal.self)
+            return owner
         }
-        otherInjector.register(module: otherModule)
-        self.otherInjector = otherInjector
+        module.bind(IAnimal.self).to(Dog.self).singleton()
+        injector.register(module: module)
+
+        let otherInjector = Injector.instance(scope: "custom")
+        let other = Module()
+        other.bind(IAnimal.self).to(Cat(name: "Billy"))
+        otherInjector.register(module: other)
+    }
+
+    override func tearDown() {
+        super.tearDown()
+        Injector.default.modules.forEach { Injector.default.remove(module: $0) }
     }
 
     func testDogInjection() {
-        let dog = self.injector?.inject(type: IAnimal.self, arguments: [
+        let dog = try? Injector.default.inject(IAnimal.self, arguments: [
             "name": "Athina"
             ])
         XCTAssertNotNil(dog)
         XCTAssert(type(of: dog!) == Dog.self, "Error during the Animal injection")
     }
 
-    func testFailDogInjection() {
-        let dog = self.injector?.inject(type: IAnimal.self)
-        XCTAssertNil(dog)
-    }
-
     func testCatInjection() {
-        let cat = self.otherInjector?.inject(type: IAnimal.self, arguments: [
-            "name": "Billy"
-            ])
+        let cat = try? Injector.instance(scope: "custom").inject(IAnimal.self)
         XCTAssertNotNil(cat)
         XCTAssert(cat!.name == "Billy", "Error during the Animal injection")
+    }
+
+    func testSingletonInjection() {
+        let animal = try? Injector.instance(scope: "custom").inject(IAnimal.self)
+        let animal2 = try? Injector.instance(scope: "custom").inject(IAnimal.self)
+        XCTAssertNotNil(animal)
+        XCTAssertTrue(animal! == animal2!)
     }
 }
