@@ -1,22 +1,12 @@
 /**
  * Dependency module is a registry of provider which provides the possibility to register providers for a specific class, struct or protocol
  * @author Benoit BRIATTE http://www.digipolitan.com
- * @copyright 2016 Digipolitan. All rights reserved.
+ * @copyright 2017 Digipolitan. All rights reserved.
  */
 open class Module {
 
     /**
      * All registrations are stored in this dictionary
-     * The first key contains the Type and the value is a dictionary of (scope : provider)
-     * Example :
-     * module.register(type: String.self, provider: p)
-     * module.register(type: String.self, scope: "my-special-scope", provider: p2)
-     * records will be : [
-     *  "String" : [
-     *      "_" : p,
-     *      "my-special-scope" : p2
-     *  ]
-     * ]
      */
     fileprivate var records: [String: Any]
 
@@ -24,7 +14,12 @@ open class Module {
         self.records = [:]
     }
 
-    open func bind<T>(_ type: T.Type) -> Binder<T> {
+    /**
+     * Bind types to the module
+     * @param type The type to be injected
+     * @return The Binder object witch provide the real instance
+     */
+    public func bind<T>(_ type: T.Type) -> Binder<T> {
         let reference = String(describing: type)
         if let binder = self.records[reference] as? Binder<T> {
             return binder
@@ -35,9 +30,8 @@ open class Module {
     }
 
     /**
-     * Retrieves a provider using a Type and a scope
+     * Retrieves a provider using a Type
      * @param type The Type used for injection
-     * @param scope The scope, give nil to use default scope
      * @return The provider or nil if no provider are registered with the given type and scope
      */
     open func provider<T>(for type: T.Type) -> Provider<T>? {

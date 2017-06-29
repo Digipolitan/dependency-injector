@@ -14,12 +14,12 @@ class ClassDependencyInjectorTests: XCTestCase {
             owner.pet = try injector.inject(IAnimal.self)
             return owner
         }
-        module.bind(IAnimal.self).to(type: Dog.self).singleton()
+        module.bind(IAnimal.self).to(Dog.self).singleton()
         injector.register(module: module)
 
         let otherInjector = Injector.instance(scope: "custom")
         let other = Module()
-        other.bind(IAnimal.self).to(object: Cat(name: "Billy"))
+        other.bind(IAnimal.self).to(Cat(name: "Billy"))
         otherInjector.register(module: other)
     }
 
@@ -30,7 +30,7 @@ class ClassDependencyInjectorTests: XCTestCase {
 
     func testDogInjection() {
         let dog = try? Injector.default.inject(IAnimal.self, arguments: [
-            IAnimalKeys.name: "Athina"
+            "name": "Athina"
             ])
         XCTAssertNotNil(dog)
         XCTAssert(type(of: dog!) == Dog.self, "Error during the Animal injection")

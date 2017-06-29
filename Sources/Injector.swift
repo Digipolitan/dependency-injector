@@ -2,7 +2,7 @@
  * Lightweight dependency injector
  * Register modules and inject objects, use the singleton to share the injector inside your application
  * @author Benoit BRIATTE http://www.digipolitan.com
- * @copyright 2016 Digipolitan. All rights reserved.
+ * @copyright 2017 Digipolitan. All rights reserved.
  */
 open class Injector {
 
@@ -61,9 +61,8 @@ open class Injector {
      * Creates a new instance conforming the input Type
      * The injector search the first module that can provide the injection
      * @param type The given Type you want to inject
-     * @param scope Custom scope, give nil to use default scope
      * @param arguments Used by the provider (Such as nonnull parameters for initializers)
-     * @return An injected object, nil if an error occurred
+     * @return An injected object
      */
     open func inject<T>(_ type: T.Type, arguments: [String: Any]? = nil) throws -> T {
         for module in self.modules {
@@ -77,6 +76,9 @@ open class Injector {
     }
 }
 
+/**
+ * Dependency errors
+ */
 public enum DependencyError: Error {
     case noDependencyProvided
     case initializationFailed

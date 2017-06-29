@@ -13,8 +13,3 @@ open class PetOwner {
         self.pet = pet
     }
 }
-
-public enum PetOwnerKeys {
-    static let name = "name"
-    static let pet = "pet"
-}

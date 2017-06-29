@@ -2,12 +2,11 @@
 
 open class Dog: IAnimal, Injectable {
 
-    public required init(injector: Injector, arguments: [String : Any]?) throws {
-        if let name = arguments?[IAnimalKeys.name] as? String {
-            self.name = name
-        } else {
+    public required convenience init(injector: Injector, arguments: [String : Any]?) throws {
+        guard let name = arguments?["name"] as? String else {
             throw DependencyError.initializationFailed
         }
+        self.init(name: name)
     }
 
     public var name: String
