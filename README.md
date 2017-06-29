@@ -25,7 +25,7 @@ pod 'DGDependencyInjector'
 
 ## The Basics
 
-First you must create a DependencyModule and register some providers
+First you must create a Module and register some providers
 
 ```swift
 let module = Module()

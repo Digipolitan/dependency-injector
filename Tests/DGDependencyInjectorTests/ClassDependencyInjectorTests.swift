@@ -46,6 +46,6 @@ class ClassDependencyInjectorTests: XCTestCase {
         let animal = try? Injector.instance(scope: "custom").inject(IAnimal.self)
         let animal2 = try? Injector.instance(scope: "custom").inject(IAnimal.self)
         XCTAssertNotNil(animal)
-        XCTAssertTrue(animal! === animal2!)
+        XCTAssertTrue(animal! == animal2!)
     }
 }
