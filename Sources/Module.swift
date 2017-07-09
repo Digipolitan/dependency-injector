@@ -49,16 +49,3 @@ extension Module: CustomStringConvertible {
         return "[\(type(of: self)) entries=\(self.records)]"
     }
 }
-
-extension Module: Equatable {
-
-    public static func == (lhs: Module, rhs: Module) -> Bool {
-        if lhs === rhs {
-            return true
-        }
-        if lhs.records.count != rhs.records.count {
-            return false
-        }
-        return true
-    }
-}

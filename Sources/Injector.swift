@@ -7,7 +7,7 @@
 open class Injector {
 
     /** Retrieves the list of Module */
-    public private(set) var modules: [Module]
+    public private(set) var modules: [String: Module]
 
     /** Retrieves the shared instance */
     open static let `default` = Injector.instance(scope: Injector.defaultScope)
@@ -27,7 +27,7 @@ open class Injector {
     }
 
     private init() {
-        self.modules = []
+        self.modules = [:]
     }
 
     /**
@@ -37,9 +37,9 @@ open class Injector {
      * @return True on success, otherwise false
      */
     @discardableResult
-    open func register(module: Module) -> Self {
-        if self.modules.index(of: module) == nil {
-            self.modules.insert(module, at: 0)
+    open func register(module: Module, with identifier: String) -> Self {
+        if self.modules[identifier] == nil {
+            self.modules[identifier] = module
         }
         return self
     }
@@ -49,9 +49,9 @@ open class Injector {
      * @param module The dependency module to be removed
      */
     @discardableResult
-    open func remove(module: Module) -> Bool {
-        if let i = self.modules.index(of: module) {
-            self.modules.remove(at: i)
+    open func remove(module identifier: String) -> Bool {
+        if self.modules[identifier] != nil {
+            self.modules[identifier] = nil
             return true
         }
         return false
@@ -65,7 +65,7 @@ open class Injector {
      * @return An injected object
      */
     open func inject<T>(_ type: T.Type, arguments: [String: Any]? = nil) throws -> T {
-        for module in self.modules {
+        for module in self.modules.values {
             if let provider = module.provider(for: type) {
                 if let res = try provider.get(injector: self, arguments: arguments) {
                     return res
@@ -87,15 +87,5 @@ public enum DependencyError: Error {
 extension Injector: CustomStringConvertible {
     open var description: String {
         return "[\(type(of: self)) modules=\(self.modules)]"
-    }
-}
-
-extension Injector: Equatable {
-
-    public static func == (lhs: Injector, rhs: Injector) -> Bool {
-        if lhs === rhs {
-            return true
-        }
-        return lhs.modules == rhs.modules
     }
 }
