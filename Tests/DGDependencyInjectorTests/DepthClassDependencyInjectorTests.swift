@@ -20,12 +20,12 @@ class DepthClassDependencyInjectorTests: XCTestCase {
             return nil
         }
         module.bind(IAnimal.self).to(Dog.self)
-        injector.register(module: module)
+        injector.register(module: module, with: "ID")
     }
 
     override func tearDown() {
         super.tearDown()
-        Injector.default.modules.forEach { Injector.default.remove(module: $0) }
+        Injector.default.modules.forEach { Injector.default.remove(module: $0.key) }
     }
 
     func testPetOwnerInjection() {

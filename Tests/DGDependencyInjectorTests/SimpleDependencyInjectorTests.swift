@@ -16,24 +16,28 @@ class SimpleDependencyInjectorTests: XCTestCase {
         module.bind(Int8.self).with { _ in
             return 78
         }
-        injector.register(module: module)
+        injector.register(module: module, with: "ID")
 
         let other = Injector.instance(scope: "special")
         let moduleOther = Module()
         moduleOther.bind(Int.self).with { _ -> Int? in
             return 99
         }
-        other.register(module: moduleOther)
+        other.register(module: moduleOther, with: "ID")
     }
 
     override func tearDown() {
         super.tearDown()
 
         let injector = Injector.default
-        injector.modules.forEach { injector.remove(module: $0) }
+        injector.modules.forEach {
+            injector.remove(module: $0.key)
+        }
 
         let other = Injector.instance(scope: "special")
-        other.modules.forEach { other.remove(module: $0) }
+        other.modules.forEach {
+            other.remove(module: $0.key)
+        }
     }
 
     func testStringInjection() {

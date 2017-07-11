@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [2.0.1](https://github.com/Digipolitan/dependency-injector-swift/releases/tag/v2.0.1)
+
+Fix module error with equatable
+
+---
+
 ## [2.0.0](https://github.com/Digipolitan/dependency-injector-swift/releases/tag/v2.0.0)
 
 Update all API

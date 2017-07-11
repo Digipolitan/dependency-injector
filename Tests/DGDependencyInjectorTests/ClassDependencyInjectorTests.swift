@@ -15,17 +15,17 @@ class ClassDependencyInjectorTests: XCTestCase {
             return owner
         }
         module.bind(IAnimal.self).to(Dog.self).singleton()
-        injector.register(module: module)
+        injector.register(module: module, with: "ID")
 
         let otherInjector = Injector.instance(scope: "custom")
         let other = Module()
         other.bind(IAnimal.self).to(Cat(name: "Billy"))
-        otherInjector.register(module: other)
+        otherInjector.register(module: other, with: "ID")
     }
 
     override func tearDown() {
         super.tearDown()
-        Injector.default.modules.forEach { Injector.default.remove(module: $0) }
+        Injector.default.modules.forEach { Injector.default.remove(module: $0.key) }
     }
 
     func testDogInjection() {
