@@ -1,4 +1,4 @@
-@testable import DGDependencyInjector
+@testable import DependencyInjector
 
 open class Cat: NSObject, IAnimal {
 
