@@ -1,21 +1,21 @@
-workspace 'DGDependencyInjector.xcworkspace'
+workspace 'DependencyInjector.xcworkspace'
 
 ## Frameworks targets
 abstract_target 'Frameworks' do
 	use_frameworks!
-	target 'DGDependencyInjector-iOS' do
+	target 'DependencyInjector-iOS' do
 		platform :ios, '8.0'
 	end
 
-	target 'DGDependencyInjector-watchOS' do
+	target 'DependencyInjector-watchOS' do
 		platform :watchos, '2.0'
 	end
 
-	target 'DGDependencyInjector-tvOS' do
+	target 'DependencyInjector-tvOS' do
 		platform :tvos, '9.0'
 	end
 
-	target 'DGDependencyInjector-OSX' do
+	target 'DependencyInjector-OSX' do
 		platform :osx, '10.9'
 	end
 end
@@ -23,15 +23,15 @@ end
 ## Tests targets
 abstract_target 'Tests' do
 	use_frameworks!
-	target 'DGDependencyInjectorTests-iOS' do
+	target 'DependencyInjectorTests-iOS' do
 		platform :ios, '8.0'
 	end
 
-	target 'DGDependencyInjectorTests-tvOS' do
+	target 'DependencyInjectorTests-tvOS' do
 		platform :tvos, '9.0'
 	end
 
-	target 'DGDependencyInjectorTests-OSX' do
+	target 'DependencyInjectorTests-OSX' do
 		platform :osx, '10.9'
 	end
 end
@@ -39,29 +39,29 @@ end
 ## Samples targets
 abstract_target 'Samples' do
 	use_frameworks!
-	target 'DGDependencyInjectorSample-iOS' do
-		project 'Samples/DGDependencyInjectorSample-iOS/DGDependencyInjectorSample-iOS'
+	target 'DependencyInjectorSample-iOS' do
+		project 'Samples/DependencyInjectorSample-iOS/DependencyInjectorSample-iOS'
 		platform :ios, '8.0'
 	end
 
 	abstract_target 'watchOS' do
-		project 'Samples/DGDependencyInjectorSample-watchOS/DGDependencyInjectorSample-watchOS'
-		target 'DGDependencyInjectorSample-watchOS' do
+		project 'Samples/DependencyInjectorSample-watchOS/DependencyInjectorSample-watchOS'
+		target 'DependencyInjectorSample-watchOS' do
 			platform :ios, '8.0'
 		end
 
-		target 'DGDependencyInjectorSample-watchOS WatchKit Extension' do
+		target 'DependencyInjectorSample-watchOS WatchKit Extension' do
 			platform :watchos, '2.0'
 		end
 	end
 
-	target 'DGDependencyInjectorSample-tvOS' do
-		project 'Samples/DGDependencyInjectorSample-tvOS/DGDependencyInjectorSample-tvOS'
+	target 'DependencyInjectorSample-tvOS' do
+		project 'Samples/DependencyInjectorSample-tvOS/DependencyInjectorSample-tvOS'
 		platform :tvos, '9.0'
 	end
 
-	target 'DGDependencyInjectorSample-OSX' do
-		project 'Samples/DGDependencyInjectorSample-OSX/DGDependencyInjectorSample-OSX'
+	target 'DependencyInjectorSample-OSX' do
+		project 'Samples/DependencyInjectorSample-OSX/DependencyInjectorSample-OSX'
 		platform :osx, '10.9'
 	end
 end

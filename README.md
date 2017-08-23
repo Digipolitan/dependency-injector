@@ -1,10 +1,10 @@
-DGDependencyInjector
+DependencyInjector
 =================================
 
 [![Build Status](https://travis-ci.org/Digipolitan/dependency-injector-swift.svg?branch=master)](https://travis-ci.org/Digipolitan/dependency-injector-swift)
-[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/DGDependencyInjector.svg)](https://img.shields.io/cocoapods/v/DGDependencyInjector.svg)
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/DependencyInjector.svg)](https://img.shields.io/cocoapods/v/DependencyInjector.svg)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![Platform](https://img.shields.io/cocoapods/p/DGDependencyInjector.svg?style=flat)](http://cocoadocs.org/docsets/DGDependencyInjector)
+[![Platform](https://img.shields.io/cocoapods/p/DependencyInjector.svg?style=flat)](http://cocoadocs.org/docsets/DependencyInjector)
 [![Twitter](https://img.shields.io/badge/twitter-@Digipolitan-blue.svg?style=flat)](http://twitter.com/Digipolitan)
 
 Dependency injector Swift. Compatible for swift server-side and swift for iOS
@@ -13,14 +13,14 @@ Dependency injector Swift. Compatible for swift server-side and swift for iOS
 
 ### CocoaPods
 
-To install DGDependencyInjector with CocoaPods, add the following lines to your `Podfile`.
+To install DependencyInjector with CocoaPods, add the following lines to your `Podfile`.
 
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0' # or platform :osx, '10.10' if your target is OS X.
 use_frameworks!
 
-pod 'DGDependencyInjector'
+pod 'DependencyInjector'
 ```
 
 ## The Basics
@@ -115,4 +115,4 @@ unacceptable behavior to [contact@digipolitan.com](mailto:contact@digipolitan.co
 
 ## License
 
-DGDependencyInjector is licensed under the [BSD 3-Clause license](LICENSE).
+DependencyInjector is licensed under the [BSD 3-Clause license](LICENSE).
