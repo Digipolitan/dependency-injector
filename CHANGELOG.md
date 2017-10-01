@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [2.1.0](https://github.com/Digipolitan/dependency-injector-swift/releases/tag/v2.1.0)
+
+update to swift 4 & xcode9
+
+---
+
 ## [2.0.2](https://github.com/Digipolitan/dependency-injector-swift/releases/tag/v2.0.2)
 
 Renaming pod
