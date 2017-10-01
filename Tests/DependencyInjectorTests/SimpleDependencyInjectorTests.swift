@@ -10,17 +10,17 @@ class SimpleDependencyInjectorTests: XCTestCase {
         let injector = Injector.default
         let module = Module()
 
-        module.bind(String.self).with { _ in
+        module.bind(String.self).with { _, _  in
             return "Hello"
         }
-        module.bind(Int8.self).with { _ in
+        module.bind(Int8.self).with { _, _ in
             return 78
         }
         injector.register(module: module, with: "ID")
 
         let other = Injector.instance(scope: "special")
         let moduleOther = Module()
-        moduleOther.bind(Int.self).with { _ -> Int? in
+        moduleOther.bind(Int.self).with { _, _ -> Int? in
             return 99
         }
         other.register(module: moduleOther, with: "ID")
