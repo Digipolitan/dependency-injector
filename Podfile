@@ -16,7 +16,7 @@ abstract_target 'Frameworks' do
 	end
 
 	target 'DependencyInjector-OSX' do
-		platform :osx, '10.9'
+		platform :osx, '10.10'
 	end
 end
 
@@ -32,7 +32,7 @@ abstract_target 'Tests' do
 	end
 
 	target 'DependencyInjectorTests-OSX' do
-		platform :osx, '10.9'
+		platform :osx, '10.10'
 	end
 end
 
