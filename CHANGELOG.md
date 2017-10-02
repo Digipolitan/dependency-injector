@@ -1,7 +1,15 @@
 # Change Log
 
 All notable changes to this project will be documented in this file.
-`dependency-injector-swift` adheres to [Semantic Versioning](http://semver.org/).
+`dependency-injector` adheres to [Semantic Versioning](http://semver.org/).
+
+---
+
+## [2.1.1](https://github.com/Digipolitan/dependency-injector/releases/tag/v2.1.1)
+
+fix embed swift
+fix swift version to samples
+migrate to dependency-injector
 
 ---
 
