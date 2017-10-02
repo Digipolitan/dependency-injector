@@ -62,6 +62,6 @@ abstract_target 'Samples' do
 
 	target 'DependencyInjectorSample-OSX' do
 		project 'Samples/DependencyInjectorSample-OSX/DependencyInjectorSample-OSX'
-		platform :osx, '10.9'
+		platform :osx, '10.10'
 	end
 end
