@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [2.1.2](https://github.com/Digipolitan/dependency-injector/releases/tag/v2.1.2)
+
+update osx platform
+Update README.md
+
+---
+
 ## [2.1.1](https://github.com/Digipolitan/dependency-injector/releases/tag/v2.1.1)
 
 fix embed swift
