@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name = "DependencyInjector"
-s.version = "2.1.1"
+s.version = "2.1.2"
 s.summary = "Dependency injector made in pure swift"
 s.homepage = "https://github.com/Digipolitan/dependency-injector"
 s.license = { :type => "BSD", :file => "LICENSE" }
