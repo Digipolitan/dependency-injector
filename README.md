@@ -1,9 +1,11 @@
 DependencyInjector
 =================================
 
+[![Swift Version](https://img.shields.io/badge/swift-4.0-orange.svg?style=flat)](https://developer.apple.com/swift/)
 [![Build Status](https://travis-ci.org/Digipolitan/dependency-injector.svg?branch=master)](https://travis-ci.org/Digipolitan/dependency-injector)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/DependencyInjector.svg)](https://img.shields.io/cocoapods/v/DependencyInjector.svg)
-[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![Carthage Compatible](https://img.shields.io/badge/carthage-compatible-brightgreen.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![Swift Package Manager Compatible](https://img.shields.io/badge/swift%20package%20manager-compatible-brightgreen.svg?style=flat)](https://swift.org/package-manager/)
 [![Platform](https://img.shields.io/cocoapods/p/DependencyInjector.svg?style=flat)](http://cocoadocs.org/docsets/DependencyInjector)
 [![Twitter](https://img.shields.io/badge/twitter-@Digipolitan-blue.svg?style=flat)](http://twitter.com/Digipolitan)
 
@@ -17,10 +19,41 @@ To install DependencyInjector with CocoaPods, add the following lines to your `P
 
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '8.0' # or platform :osx, '10.10' if your target is OS X.
+platform :ios, '9.0'
 use_frameworks!
 
 pod 'DependencyInjector'
+```
+
+### Carthage
+
+[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.
+
+You can install Carthage with [Homebrew](http://brew.sh/) using the following command:
+
+```bash
+$ brew update
+$ brew install carthage
+```
+
+To integrate DependencyInjector into your Xcode project using Carthage, specify it in your `Cartfile`:
+
+```
+github 'Digipolitan/DependencyInjector' ~> 2.0
+```
+
+Run `carthage update` to build the framework and drag the built `DependencyInjector.framework` into your Xcode project.
+
+### Swift Package Manager
+
+The [Swift Package Manager](https://swift.org/package-manager/) is a tool for automating the distribution of Swift code and is integrated into the `swift` compiler.
+
+Once you have your Swift package set up, adding DependencyInjector as a dependency is as easy as adding it to the `dependencies` value of your `Package.swift`.
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/Digipolitan/DependencyInjector.git", from: "2.0.0")
+]
 ```
 
 ## The Basics

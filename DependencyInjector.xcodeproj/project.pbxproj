@@ -274,7 +274,6 @@
 		A3169DCF1DE062A000BABAFD /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				A37058D61E5DE4ED009D0739 /* Domain */,
 				A38EF2C61DECF97000637484 /* DependencyInjectorTests */,
 				A3169DD11DE062A000BABAFD /* Info.plist */,
 			);
@@ -296,6 +295,7 @@
 		A38EF2C61DECF97000637484 /* DependencyInjectorTests */ = {
 			isa = PBXGroup;
 			children = (
+				A37058D61E5DE4ED009D0739 /* Domain */,
 				A37058E71E5DE500009D0739 /* ClassDependencyInjectorTests.swift */,
 				A37058E81E5DE500009D0739 /* DepthClassDependencyInjectorTests.swift */,
 				A37058E91E5DE500009D0739 /* SimpleDependencyInjectorTests.swift */,
