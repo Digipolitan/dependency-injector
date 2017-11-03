@@ -14,7 +14,7 @@ public struct Dog: IAnimal {
 }
 
 extension Dog: Injectable {
-    public init(injector: Injector, arguments: [String : Any]?) throws {
+    public init(injector: Injector, arguments: [String: Any]?) throws {
         guard let name = arguments?["name"] as? String else {
             throw DependencyError.initializationFailed
         }

@@ -7,7 +7,7 @@ let package = Package(
     products: [
         .library(
             name: "DependencyInjector",
-            targets: ["DependencyInjector"]),
+            targets: ["DependencyInjector"])
     ],
     dependencies: [
     ],
