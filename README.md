@@ -52,7 +52,7 @@ Once you have your Swift package set up, adding DependencyInjector as a dependen
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/Digipolitan/DependencyInjector.git", from: "2.0.0")
+    .package(url: "https://github.com/Digipolitan/dependency-injector.git", from: "2.0.0")
 ]
 ```
 
