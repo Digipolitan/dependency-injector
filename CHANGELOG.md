@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [2.1.4](https://github.com/Digipolitan/dependency-injector/releases/tag/v2.1.4)
+
+update readme
+
+---
+
 ## [2.1.3](https://github.com/Digipolitan/dependency-injector/releases/tag/v2.1.3)
 
 add swift version 4
