@@ -39,7 +39,7 @@ $ brew install carthage
 To integrate DependencyInjector into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```
-github 'Digipolitan/DependencyInjector' ~> 2.0
+github 'Digipolitan/dependency-injector' ~> 2.0
 ```
 
 Run `carthage update` to build the framework and drag the built `DependencyInjector.framework` into your Xcode project.
