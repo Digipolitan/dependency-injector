@@ -29,25 +29,25 @@ class DepthClassDependencyInjectorTests: XCTestCase {
     }
 
     func testPetOwnerInjection() {
-        let po = try? Injector.default.inject(PetOwner.self, arguments: [
+        let petOwner = try? Injector.default.inject(PetOwner.self, arguments: [
             "name": "Bala"
         ])
-        XCTAssertNotNil(po)
-        XCTAssert(po!.name == "Bala", "Error during the PetOwner injection")
-        XCTAssertNil(po!.pet)
+        XCTAssertNotNil(petOwner)
+        XCTAssert(petOwner!.name == "Bala", "Error during the PetOwner injection")
+        XCTAssertNil(petOwner!.pet)
     }
 
     func testPetOwnerInjectionWithAnimal() {
-        let po = try? Injector.default.inject(PetOwner.self, arguments: [
+        let petOwner = try? Injector.default.inject(PetOwner.self, arguments: [
             "name": "Benoit",
             "pet": [
                 "name": "Athina"
             ]
         ])
-        XCTAssertNotNil(po)
-        XCTAssert(po!.name == "Benoit", "Error during the PetOwner injection")
-        XCTAssertNotNil(po!.pet)
-        XCTAssert(type(of: po!.pet!) == Dog.self, "Error during the Animal injection")
-        XCTAssert(po!.pet!.name == "Athina", "Error during the Animal injection")
+        XCTAssertNotNil(petOwner)
+        XCTAssert(petOwner!.name == "Benoit", "Error during the PetOwner injection")
+        XCTAssertNotNil(petOwner!.pet)
+        XCTAssert(type(of: petOwner!.pet!) == Dog.self, "Error during the Animal injection")
+        XCTAssert(petOwner!.pet!.name == "Athina", "Error during the Animal injection")
     }
 }
