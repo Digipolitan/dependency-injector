@@ -10,14 +10,14 @@ open class Injector {
     public private(set) var modules: [String: Module]
 
     /** Retrieves the shared instance */
-    open static let `default` = Injector.instance(scope: Injector.defaultScope)
+    public static let `default` = Injector.instance(scope: Injector.defaultScope)
 
     private static var registry = [String: Injector]()
 
     /** The default key */
     private static let defaultScope = "_"
 
-    open static func instance(scope: String) -> Injector {
+    public static func instance(scope: String) -> Injector {
         if let stored = self.registry[scope] {
             return stored
         }
