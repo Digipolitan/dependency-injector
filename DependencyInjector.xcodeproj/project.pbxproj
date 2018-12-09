@@ -534,6 +534,7 @@
 					A3169E131DE072C800BABAFD = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 582762VK3P;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -1284,6 +1285,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.digipolitan.DependencyInjectorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -1300,6 +1302,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.digipolitan.DependencyInjectorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
