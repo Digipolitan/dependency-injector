@@ -128,8 +128,6 @@
 				A30D64891E0D7B2A00A3CE45 /* Frameworks */,
 				A30D648A1E0D7B2A00A3CE45 /* Resources */,
 				A30D64A11E0D7BA200A3CE45 /* Embed Frameworks */,
-				6F91670C5C8679B959E65CFB /* [CP] Embed Pods Frameworks */,
-				7A423DABB450FAAD99D572FF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -188,36 +186,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6F91670C5C8679B959E65CFB /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../../Pods/Target Support Files/Pods-Samples-DependencyInjectorSample-tvOS/Pods-Samples-DependencyInjectorSample-tvOS-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7A423DABB450FAAD99D572FF /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../../Pods/Target Support Files/Pods-Samples-DependencyInjectorSample-tvOS/Pods-Samples-DependencyInjectorSample-tvOS-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		C9C3C7D7C59B1AB10EA77253 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
