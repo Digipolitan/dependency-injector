@@ -15,6 +15,31 @@ Install _fastlane_ using
 or alternatively using `brew cask install fastlane`
 
 # Available Actions
+### multi_environment
+```
+fastlane multi_environment
+```
+Execute a lane using different environment variables
+
+#### Options
+
+* __**target_lane**__: The target lane to execute with different environment
+
+  * **environment_variable**: TARGET_LANE
+
+  * **type**: string
+
+  * **optional**: false
+
+#### Environment variables
+
+* __**ENVIRONMENT_DIRECTORY_PATH**__: The directory path of the environment info
+
+  * **type**: string
+
+  * **optional**: true
+
+
 ### appfile_init
 ```
 fastlane appfile_init
