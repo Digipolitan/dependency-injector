@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [2.2.1](https://github.com/Digipolitan/dependency-injector/releases/tag/v2.2.1)
+
+update swift 5
+
+---
+
 ## [2.2.0](https://github.com/Digipolitan/dependency-injector/releases/tag/v2.2.0)
 
 fix swift version to 4.2
